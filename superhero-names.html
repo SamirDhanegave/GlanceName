@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to create iconic superhero names for your characters. Discover naming conventions, archetypes, and creative techniques for comics, writing, and character design.">
+    <meta name="keywords" content="superhero names, character names, comic book names, superhero aliases, character creation, writing tips, comic creation, hero names, villain names">
+    <meta name="author" content="GlanceName">
+    <title>Superhero Names | GlanceName</title>
+           <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --hero-blue: #3b82f6;
+            --villain-red: #ef4444;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "⚡";
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Strategy Cards */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .strategy-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .strategy-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .descriptive-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        .alliterative-header {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+        }
+
+        .mythological-header {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+        }
+
+        .animal-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .elemental-header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .abstract-header {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
+
+        .strategy-header i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .strategy-header h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .strategy-content {
+            padding: 25px;
+        }
+
+        .strategy-content p {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .example-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .example-item {
+            padding: 10px 12px;
+            background: var(--light);
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Archetype Section */
+        .archetype-section {
+            margin: 40px 0;
+        }
+
+        .archetype-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .archetype-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 4px solid var(--hero-blue);
+        }
+
+        .villain-card {
+            border-top-color: var(--villain-red);
+        }
+
+        .archetype-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .archetype-icon {
+            font-size: 36px;
+            color: var(--hero-blue);
+            margin-bottom: 15px;
+        }
+
+        .villain-icon {
+            color: var(--villain-red);
+        }
+
+        .archetype-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .archetype-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .archetype-name {
+            padding: 8px 12px;
+            background: var(--light);
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Power-Based Names */
+        .powers-section {
+            margin: 40px 0;
+        }
+
+        .powers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .power-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .power-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .power-icon {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .power-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .power-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Naming Conventions */
+        .conventions-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .conventions-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .convention-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .convention-item {
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .convention-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .convention-item h4 i {
+            color: var(--primary);
+        }
+
+        .convention-item p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card h3 i {
+            font-size: 18px;
+        }
+
+        .tip-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Character Development */
+        .character-section {
+            margin: 40px 0;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .character-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .character-icon {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .character-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .character-card p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .character-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Mistakes to Avoid */
+        .mistakes-section {
+            margin: 40px 0;
+        }
+
+        .mistakes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .mistake-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid #ef4444;
+        }
+
+        .mistake-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #dc2626;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mistake-card h3 i {
+            font-size: 18px;
+        }
+
+        .mistake-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .archetype-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .powers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mistakes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .convention-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .strategy-header {
+                padding: 15px;
+            }
+            
+            .strategy-content {
+                padding: 20px;
+            }
+            
+            .archetype-card {
+                padding: 20px;
+            }
+            
+            .power-card {
+                padding: 20px;
+            }
+            
+            .tip-card {
+                padding: 20px;
+            }
+            
+            .character-card {
+                padding: 20px;
+            }
+            
+            .conventions-section {
+                padding: 20px;
+            }
+        }
+
+        /* Special Effects */
+        .hero-glow {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+
+        .villain-glow {
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mask"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Superhero Names: Creating Iconic Aliases for Your Characters</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h1 class="section-title">
+                <i class="fas fa-shield-alt"></i>
+                Crafting Memorable Superhero Identities
+            </h1>
+            <p class="intro-text">
+                A superhero's name is more than just a label—it's their identity, their brand, and the first impression 
+                they make on readers and audiences. The right name can convey power, personality, and purpose in just 
+                a few syllables. Whether you're creating comic book characters, writing stories, or developing games, 
+                discover the art and science behind crafting iconic superhero aliases that stand the test of time.
+            </p>
+        </section>
+
+        <!-- Naming Strategies -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                Superhero Naming Strategies
+            </h2>
+            
+            <div class="strategy-grid">
+                <!-- Descriptive Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header descriptive-header">
+                        <i class="fas fa-tag"></i>
+                        <h3>Descriptive Names</h3>
+                        <p>Describe powers or appearance</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names that directly describe the hero's abilities, appearance, or role. These names are straightforward and help readers immediately understand the character.</p>
+                        <div class="example-list">
+                            <div class="example-item">Iron Man</div>
+                            <div class="example-item">The Flash</div>
+                            <div class="example-item">Aquaman</div>
+                            <div class="example-item">Daredevil</div>
+                        </div>
+                        <p><strong>Best for:</strong> Heroes with clear, singular powers or distinctive visual elements.</p>
+                    </div>
+                </div>
+
+                <!-- Alliterative Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header alliterative-header">
+                        <i class="fas fa-language"></i>
+                        <h3>Alliterative Names</h3>
+                        <p>Create memorable rhythm</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names where the first and last name start with the same sound. These names are catchy, memorable, and have a classic comic book feel.</p>
+                        <div class="example-list">
+                            <div class="example-item">Peter Parker</div>
+                            <div class="example-item">Bruce Banner</div>
+                            <div class="example-item">Reed Richards</div>
+                            <div class="example-item">Scott Summers</div>
+                        </div>
+                        <p><strong>Best for:</strong> Classic superhero identities and alter egos.</p>
+                    </div>
+                </div>
+
+                <!-- Mythological Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header mythological-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Mythological Names</h3>
+                        <p>Evoke ancient power</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names drawn from mythology, gods, and legendary figures. These names carry weight and suggest epic power and heritage.</p>
+                        <div class="example-list">
+                            <div class="example-item">Thor</div>
+                            <div class="example-item">Hercules</div>
+                            <div class="example-item">Ares</div>
+                            <div class="example-item">Artemis</div>
+                        </div>
+                        <p><strong>Best for:</strong> Gods, demigods, and characters with divine or ancient origins.</p>
+                    </div>
+                </div>
+
+                <!-- Animal-Themed Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header animal-header">
+                        <i class="fas fa-paw"></i>
+                        <h3>Animal-Themed Names</h3>
+                        <p>Connect to nature</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names that reference animals or animal characteristics. These names suggest specific traits and abilities.</p>
+                        <div class="example-list">
+                            <div class="example-item">Black Panther</div>
+                            <div class="example-item">Wolverine</div>
+                            <div class="example-item">Hawk-eye</div>
+                            <div class="example-item">Spider-Man</div>
+                        </div>
+                        <p><strong>Best for:</strong> Heroes with animal-based powers or characteristics.</p>
+                    </div>
+                </div>
+
+                <!-- Elemental Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header elemental-header">
+                        <i class="fas fa-fire"></i>
+                        <h3>Elemental Names</h3>
+                        <p>Harness natural forces</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names based on natural elements and forces. These names clearly communicate power over specific elements.</p>
+                        <div class="example-list">
+                            <div class="example-item">Storm</div>
+                            <div class="example-item">Human Torch</div>
+                            <div class="example-item">Iceman</div>
+                            <div class="example-item">Earthquake</div>
+                        </div>
+                        <p><strong>Best for:</strong> Characters who control natural elements or forces.</p>
+                    </div>
+                </div>
+
+                <!-- Abstract Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header abstract-header">
+                        <i class="fas fa-infinity"></i>
+                        <h3>Abstract Names</h3>
+                        <p>Create mystery and intrigue</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names that are conceptual or abstract, creating curiosity and suggesting deeper meaning.</p>
+                        <div class="example-list">
+                            <div class="example-item">Doctor Strange</div>
+                            <div class="example-item">The Question</div>
+                            <div class="example-item">Rorschach</div>
+                            <div class="example-item">Paradox</div>
+                        </div>
+                        <p><strong>Best for:</strong> Mysterious characters and those with complex or abstract powers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Archetype Examples -->
+        <section class="archetype-section">
+            <h2 class="section-title">
+                <i class="fas fa-chess-queen"></i>
+                Hero & Villain Archetypes
+            </h2>
+            
+            <div class="archetype-grid">
+                <div class="archetype-card">
+                    <div class="archetype-icon">
+                        <i class="fas fa-fist-raised"></i>
+                    </div>
+                    <h3>Classic Heroes</h3>
+                    <div class="archetype-examples">
+                        <span class="archetype-name">Superman</span>
+                        <span class="archetype-name">Wonder Woman</span>
+                        <span class="archetype-name">Captain America</span>
+                        <span class="archetype-name">Shazam</span>
+                    </div>
+                </div>
+                
+                <div class="archetype-card villain-card">
+                    <div class="archetype-icon villain-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3>Classic Villains</h3>
+                    <div class="archetype-examples">
+                        <span class="archetype-name">Lex Luthor</span>
+                        <span class="archetype-name">The Joker</span>
+                        <span class="archetype-name">Magneto</span>
+                        <span class="archetype-name">Doctor Doom</span>
+                    </div>
+                </div>
+                
+                <div class="archetype-card">
+                    <div class="archetype-icon">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h3>Anti-Heroes</h3>
+                    <div class="archetype-examples">
+                        <span class="archetype-name">Wolverine</span>
+                        <span class="archetype-name">Punisher</span>
+                        <span class="archetype-name">Deadpool</span>
+                        <span class="archetype-name">Venom</span>
+                    </div>
+                </div>
+                
+                <div class="archetype-card villain-card">
+                    <div class="archetype-icon villain-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mastermind Villains</h3>
+                    <div class="archetype-examples">
+                        <span class="archetype-name">Ra's al Ghul</span>
+                        <span class="archetype-name">Kingpin</span>
+                        <span class="archetype-name">Loki</span>
+                        <span class="archetype-name">Baron Zemo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Power-Based Names -->
+        <section class="powers-section">
+            <h2 class="section-title">
+                <i class="fas fa-bolt"></i>
+                Power-Based Naming Conventions
+            </h2>
+            
+            <div class="powers-grid">
+                <div class="power-card">
+                    <div class="power-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Elemental Powers</h3>
+                    <div class="power-examples">
+                        <span class="archetype-name">Storm</span>
+                        <span class="archetype-name">Human Torch</span>
+                        <span class="archetype-name">Aquaman</span>
+                        <span class="archetype-name">Magneto</span>
+                    </div>
+                </div>
+                
+                <div class="power-card">
+                    <div class="power-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Physical Powers</h3>
+                    <div class="power-examples">
+                        <span class="archetype-name">The Flash</span>
+                        <span class="archetype-name">Superman</span>
+                        <span class="archetype-name">Hulk</span>
+                        <span class="archetype-name">Daredevil</span>
+                    </div>
+                </div>
+                
+                <div class="power-card">
+                    <div class="power-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Sensory Powers</h3>
+                    <div class="power-examples">
+                        <span class="archetype-name">Cyclops</span>
+                        <span class="archetype-name">Professor X</span>
+                        <span class="archetype-name">Jean Grey</span>
+                        <span class="archetype-name">Doctor Strange</span>
+                    </div>
+                </div>
+                
+                <div class="power-card">
+                    <div class="power-icon">
+                        <i class="fas fa-hat-wizard"></i>
+                    </div>
+                    <h3>Mystical Powers</h3>
+                    <div class="power-examples">
+                        <span class="archetype-name">Doctor Fate</span>
+                        <span class="archetype-name">Scarlet Witch</span>
+                        <span class="archetype-name">Zatanna</span>
+                        <span class="archetype-name">Constantine</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Naming Conventions -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-pen-fancy"></i>
+                Superhero Naming Conventions
+            </h2>
+            
+            <div class="conventions-section">
+                <h3><i class="fas fa-list-ol"></i> Classic Naming Patterns</h3>
+                <div class="convention-list">
+                    <div class="convention-item">
+                        <h4><i class="fas fa-user-tie"></i> The "Man" Suffix</h4>
+                        <p>Superman, Batman, Spider-Man - Classic pattern suggesting humanity with extraordinary qualities.</p>
+                    </div>
+                    <div class="convention-item">
+                        <h4><i class="fas fa-female"></i> The "Woman" Suffix</h4>
+                        <p>Wonder Woman, Invisible Woman - Female equivalent with the same powerful connotations.</p>
+                    </div>
+                    <div class="convention-item">
+                        <h4><i class="fas fa-user-md"></i> The "Doctor" Title</h4>
+                        <p>Doctor Strange, Doctor Fate, Doctor Doom - Suggests intelligence, expertise, or mystery.</p>
+                    </div>
+                    <div class="convention-item">
+                        <h4><i class="fas fa-crown"></i> Royal & Noble Titles</h4>
+                        <p>Black Panther, Prince Namor, Baron Zemo - Implies leadership, heritage, or authority.</p>
+                    </div>
+                    <div class="convention-item">
+                        <h4><i class="fas fa-mask"></i> The "The" Prefix</h4>
+                        <p>The Flash, The Hulk, The Thing - Creates a sense of uniqueness and singularity.</p>
+                    </div>
+                    <div class="convention-item">
+                        <h4><i class="fas fa-ghost"></i> Color + Noun</h4>
+                        <p>Green Arrow, Black Widow, White Queen - Simple, visual, and highly memorable pattern.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Development -->
+        <section class="character-section">
+            <h2 class="section-title">
+                <i class="fas fa-user-edit"></i>
+                Character-Driven Naming
+            </h2>
+            
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="character-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Alter Ego Names</h3>
+                    <p>Names that reflect the character's civilian identity and personal journey.</p>
+                    <div class="character-examples">
+                        <span class="archetype-name">Bruce Wayne → Batman</span>
+                        <span class="archetype-name">Peter Parker → Spider-Man</span>
+                        <span class="archetype-name">Diana Prince → Wonder Woman</span>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Legacy Names</h3>
+                    <p>Names passed down through generations or adopted by new characters.</p>
+                    <div class="character-examples">
+                        <span class="archetype-name">Robin (Multiple)</span>
+                        <span class="archetype-name">The Flash (Multiple)</span>
+                        <span class="archetype-name">Green Lantern (Corps)</span>
+                    </div>
+                </div>
+                
+                <div class="character-card">
+                    <div class="character-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Cultural Names</h3>
+                    <p>Names that reflect specific cultural backgrounds or mythological traditions.</p>
+                    <div class="character-examples">
+                        <span class="archetype-name">Black Panther (Wakanda)</span>
+                        <span class="archetype-name">Shang-Chi (Chinese)</span>
+                        <span class="archetype-name">Ms. Marvel (Pakistani)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                Superhero Naming Tips
+            </h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><i class="fas fa-volume-up"></i> Test Pronunciation</h3>
+                    <p>Say the name out loud to ensure it's easy to pronounce and has a good rhythm.</p>
+                    <p>Avoid names that are tongue-twisters or difficult for readers to say comfortably.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-search"></i> Check Originality</h3>
+                    <p>Research existing superhero names to avoid unintentional duplication.</p>
+                    <p>Even similar-sounding names can create confusion with established characters.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-theater-masks"></i> Match Tone & Genre</h3>
+                    <p>Ensure the name fits the tone of your story—serious, humorous, dark, or lighthearted.</p>
+                    <p>A mismatched name can undermine the character's credibility and the story's tone.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-expand-alt"></i> Allow for Nicknames</h3>
+                    <p>Consider what natural nicknames or abbreviations might emerge from the full name.</p>
+                    <p>Characters often get shortened names from allies or mocking names from enemies.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-history"></i> Consider Evolution</h3>
+                    <p>Think about how the name might change as the character grows and evolves.</p>
+                    <p>Some heroes start with one name and earn a more significant name through their journey.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-users"></i> Test with Others</h3>
+                    <p>Get feedback from potential readers to see what associations the name creates.</p>
+                    <p>Different people may have different interpretations of the same name.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mistakes to Avoid -->
+        <section class="mistakes-section">
+            <h2 class="section-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                Common Superhero Naming Mistakes
+            </h2>
+            
+            <div class="mistakes-grid">
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Overly Complex Names</h3>
+                    <p>Names that are too long, difficult to spell, or hard to remember can alienate readers.</p>
+                    <p><strong>Solution:</strong> Keep names to 1-3 words maximum for optimal memorability.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Generic Descriptors</h3>
+                    <p>Names like "Power Man" or "Strong Guy" lack originality and specific character identity.</p>
+                    <p><strong>Solution:</strong> Add unique elements that make the name specific to your character.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Cultural Appropriation</h3>
+                    <p>Using names from cultures you don't understand can be offensive and inauthentic.</p>
+                    <p><strong>Solution:</strong> Research thoroughly or create original names inspired by multiple influences.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Limiting Names</h3>
+                    <p>Names that are too specific can limit character growth or make powers seem one-dimensional.</p>
+                    <p><strong>Solution:</strong> Choose names that allow for character evolution and power development.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Unintentional Humor</h3>
+                    <p>Names that sound funny or have unintended double meanings can undermine serious characters.</p>
+                    <p><strong>Solution:</strong> Test names with different audiences to catch unintended interpretations.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Copying Established Heroes</h3>
+                    <p>Names too similar to existing characters create comparison and lack originality.</p>
+                    <p><strong>Solution:</strong> Study existing names for inspiration but create something uniquely yours.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="container">
+        <p>GlanceName &copy; 2025 - Superhero Naming and Character Creation Resources</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to strategy cards
+            const strategyCards = document.querySelectorAll('.strategy-card');
+            strategyCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'var(--shadow)';
+                });
+            });
+
+            // Add animation to section titles on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all section titles and cards
+            const animatedElements = document.querySelectorAll('.section-title, .strategy-card, .archetype-card, .power-card, .tip-card, .character-card, .mistake-card, .convention-item');
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.5s ease';
+                observer.observe(element);
+            });
+
+            // Add special effects to hero and villain names
+            const heroNames = document.querySelectorAll('.archetype-card:not(.villain-card) .archetype-name');
+            heroNames.forEach(name => {
+                name.addEventListener('mouseenter', function() {
+                    this.classList.add('hero-glow');
+                });
+                name.addEventListener('mouseleave', function() {
+                    this.classList.remove('hero-glow');
+                });
+            });
+
+            const villainNames = document.querySelectorAll('.villain-card .archetype-name');
+            villainNames.forEach(name => {
+                name.addEventListener('mouseenter', function() {
+                    this.classList.add('villain-glow');
+                });
+                name.addEventListener('mouseleave', function() {
+                    this.classList.remove('villain-glow');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

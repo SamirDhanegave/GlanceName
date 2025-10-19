@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to find the perfect startup name with our comprehensive guide. Discover naming strategies, brand identity tips, and creative techniques for entrepreneurs.">
+    <meta name="keywords" content="startup name generator, brand naming, business names, startup names, company naming, brand identity, entrepreneurship, business naming strategies">
+    <meta name="author" content="GlanceName">
+    <title>Startup Name | GlanceName</title>
+           <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Strategy Cards */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .strategy-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .strategy-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .descriptive-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        .evocative-header {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+        }
+
+        .invented-header {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+        }
+
+        .acronym-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .founder-header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .geographic-header {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
+
+        .strategy-header i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .strategy-header h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .strategy-content {
+            padding: 25px;
+        }
+
+        .strategy-content p {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .example-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .example-item {
+            padding: 10px 12px;
+            background: var(--light);
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Industry Examples */
+        .industry-section {
+            margin: 40px 0;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .industry-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .industry-icon {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .industry-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .industry-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .industry-name {
+            padding: 8px 12px;
+            background: var(--light);
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Naming Process */
+        .process-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .process-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .process-step {
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .process-step h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card h3 i {
+            font-size: 18px;
+        }
+
+        .tip-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Checklist Section */
+        .checklist-section {
+            margin: 40px 0;
+        }
+
+        .checklist {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+
+        .checklist h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .checklist li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist li i {
+            color: var(--secondary);
+            font-size: 18px;
+        }
+
+        /* Common Mistakes */
+        .mistakes-section {
+            margin: 40px 0;
+        }
+
+        .mistakes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .mistake-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid #ef4444;
+        }
+
+        .mistake-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #dc2626;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mistake-card h3 i {
+            font-size: 18px;
+        }
+
+        .mistake-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .industry-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mistakes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+            
+            .checklist ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .strategy-header {
+                padding: 15px;
+            }
+            
+            .strategy-content {
+                padding: 20px;
+            }
+            
+            .industry-card {
+                padding: 20px;
+            }
+            
+            .tip-card {
+                padding: 20px;
+            }
+            
+            .process-section {
+                padding: 20px;
+            }
+            
+            .checklist {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-signature"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Startup Name Generator: How to Find the Perfect Brand Name</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h1 class="section-title">
+                <i class="fas fa-rocket"></i>
+                Crafting the Perfect Startup Name
+            </h1>
+            <p class="intro-text">
+                Your startup's name is more than just a label—it's the foundation of your brand identity, 
+                the first impression you make on customers, and a critical factor in your business's success. 
+                A great name can attract attention, convey your values, and become a valuable asset. 
+                Discover proven strategies and techniques for finding the perfect name for your venture.
+            </p>
+        </section>
+
+        <!-- Naming Strategies -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-chess-knight"></i>
+                Proven Naming Strategies
+            </h2>
+            
+            <div class="strategy-grid">
+                <!-- Descriptive Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header descriptive-header">
+                        <i class="fas fa-tag"></i>
+                        <h3>Descriptive Names</h3>
+                        <p>Clearly explain what you do</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names that directly describe your product, service, or industry. These names are straightforward and help customers immediately understand your business.</p>
+                        <div class="example-list">
+                            <div class="example-item">General Motors</div>
+                            <div class="example-item">The Weather Channel</div>
+                            <div class="example-item">Booking.com</div>
+                            <div class="example-item">Food Network</div>
+                        </div>
+                        <p><strong>Best for:</strong> B2B companies, service businesses, and industries where clarity is crucial.</p>
+                    </div>
+                </div>
+
+                <!-- Evocative Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header evocative-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Evocative Names</h3>
+                        <p>Create emotional connections</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names that evoke feelings, imagery, or concepts related to your brand. These names are memorable and can build strong emotional connections.</p>
+                        <div class="example-list">
+                            <div class="example-item">Amazon</div>
+                            <div class="example-item">Nike</div>
+                            <div class="example-item">Uber</div>
+                            <div class="example-item">Slack</div>
+                        </div>
+                        <p><strong>Best for:</strong> Consumer brands, tech companies, and businesses wanting to stand out.</p>
+                    </div>
+                </div>
+
+                <!-- Invented Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header invented-header">
+                        <i class="fas fa-atom"></i>
+                        <h3>Invented Names</h3>
+                        <p>Create unique brand assets</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Completely new words created specifically for your brand. These names are highly distinctive and easily trademarkable.</p>
+                        <div class="example-list">
+                            <div class="example-item">Google</div>
+                            <div class="example-item">Kodak</div>
+                            <div class="example-item">Xerox</div>
+                            <div class="example-item">Verizon</div>
+                        </div>
+                        <p><strong>Best for:</strong> Tech startups, innovative products, and global brands.</p>
+                    </div>
+                </div>
+
+                <!-- Acronym Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header acronym-header">
+                        <i class="fas fa-abacus"></i>
+                        <h3>Acronym Names</h3>
+                        <p>Simplify complex names</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names formed from the initial letters of a longer name or phrase. These names are short, memorable, and professional.</p>
+                        <div class="example-list">
+                            <div class="example-item">IBM</div>
+                            <div class="example-item">NASA</div>
+                            <div class="example-item">IKEA</div>
+                            <div class="example-item">ASOS</div>
+                        </div>
+                        <p><strong>Best for:</strong> Professional services, technology companies, and organizations.</p>
+                    </div>
+                </div>
+
+                <!-- Founder Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header founder-header">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Founder Names</h3>
+                        <p>Build on personal reputation</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names based on the founders' names. These names can build trust and create a personal connection with customers.</p>
+                        <div class="example-list">
+                            <div class="example-item">Ford</div>
+                            <div class="example-item">Disney</div>
+                            <div class="example-item">Hewlett-Packard</div>
+                            <div class="example-item">Johnson & Johnson</div>
+                        </div>
+                        <p><strong>Best for:</strong> Consulting firms, creative agencies, and businesses with well-known founders.</p>
+                    </div>
+                </div>
+
+                <!-- Geographic Names -->
+                <div class="strategy-card">
+                    <div class="strategy-header geographic-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Geographic Names</h3>
+                        <p>Highlight location or origin</p>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Names that reference a specific location, region, or geographic feature. These names can create local pride and recognition.</p>
+                        <div class="example-list">
+                            <div class="example-item">Airbnb</div>
+                            <div class="example-item">eBay</div>
+                            <div class="example-item">Nissan</div>
+                            <div class="example-item">Boston Consulting</div>
+                        </div>
+                        <p><strong>Best for:</strong> Local businesses, regional brands, and companies with strong geographic ties.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Examples -->
+        <section class="industry-section">
+            <h2 class="section-title">
+                <i class="fas fa-industry"></i>
+                Industry-Specific Naming Examples
+            </h2>
+            
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <div class="industry-examples">
+                        <span class="industry-name">Apple</span>
+                        <span class="industry-name">Microsoft</span>
+                        <span class="industry-name">Salesforce</span>
+                        <span class="industry-name">Slack</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <div class="industry-examples">
+                        <span class="industry-name">Amazon</span>
+                        <span class="industry-name">Shopify</span>
+                        <span class="industry-name">Etsy</span>
+                        <span class="industry-name">Wayfair</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health & Wellness</h3>
+                    <div class="industry-examples">
+                        <span class="industry-name">Peloton</span>
+                        <span class="industry-name">Calm</span>
+                        <span class="industry-name">Fitbit</span>
+                        <span class="industry-name">Headspace</span>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Food & Beverage</h3>
+                    <div class="industry-examples">
+                        <span class="industry-name">Beyond Meat</span>
+                        <span class="industry-name">Impossible Foods</span>
+                        <span class="industry-name">Blue Bottle Coffee</span>
+                        <span class="industry-name">Sweetgreen</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Naming Process -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-sitemap"></i>
+                The Startup Naming Process
+            </h2>
+            
+            <div class="process-section">
+                <h3><i class="fas fa-list-ol"></i> Step-by-Step Guide</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Define Your Brand</h4>
+                        <p>Clarify your mission, values, target audience, and unique selling proposition.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Brainstorm Ideas</h4>
+                        <p>Generate a wide range of name ideas using different naming strategies.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Screen for Availability</h4>
+                        <p>Check domain names, social media handles, and trademark availability.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Test with Audience</h4>
+                        <p>Get feedback from potential customers and stakeholders.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Make Final Selection</h4>
+                        <p>Choose the name that best represents your brand and has the best availability.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h4>Secure Assets</h4>
+                        <p>Register domains, social media accounts, and file for trademarks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                Essential Naming Tips
+            </h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><i class="fas fa-search"></i> Check Availability Early</h3>
+                    <p>Before falling in love with a name, verify that the domain name and social media handles are available.</p>
+                    <p>Use tools like domain registrars and namecheckr to check availability across platforms.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-globe"></i> Consider Global Appeal</h3>
+                    <p>Ensure your name works internationally and doesn't have negative connotations in other languages.</p>
+                    <p>Test your name with people from different cultural backgrounds if you plan to expand globally.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-trademark"></i> Think About Trademarking</h3>
+                    <p>Choose a name that's distinctive enough to be trademarked and protected legally.</p>
+                    <p>Avoid generic terms that are difficult to trademark and protect from competitors.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-mobile-alt"></i> Keep It Simple</h3>
+                    <p>Short, simple names are easier to remember, spell, and share with others.</p>
+                    <p>Aim for 1-3 syllables and avoid complex spellings or confusing pronunciations.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-expand-alt"></i> Allow for Growth</h3>
+                    <p>Choose a name that won't limit your business as it grows or expands into new products/services.</p>
+                    <p>Avoid overly specific names that might become irrelevant as your business evolves.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-users"></i> Test with Your Audience</h3>
+                    <p>Get feedback from your target customers to ensure the name resonates with them.</p>
+                    <p>Pay attention to their emotional reactions and associations with the name.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist Section -->
+        <section class="checklist-section">
+            <h2 class="section-title">
+                <i class="fas fa-clipboard-check"></i>
+                Startup Name Checklist
+            </h2>
+            
+            <div class="checklist">
+                <h3><i class="fas fa-list-check"></i> Essential Criteria for Your Startup Name</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Memorable:</strong> Easy to recall and share with others
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Meaningful:</strong> Relevant to your business and target audience
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Simple to Spell:</strong> Easy to type and find online
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Available:</strong> Domain and social media handles are obtainable
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Scalable:</strong> Works as your business grows and expands
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Trademarkable:</strong> Distinctive enough for legal protection
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Positive Connotations:</strong> Creates good associations
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Pronounceable:</strong> Easy to say and share verbally
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Brandable:</strong> Works well with logos and visual identity
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Future-proof:</strong> Won't become dated or irrelevant
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Common Mistakes -->
+        <section class="mistakes-section">
+            <h2 class="section-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                Common Naming Mistakes to Avoid
+            </h2>
+            
+            <div class="mistakes-grid">
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Being Too Literal</h3>
+                    <p>Overly descriptive names can limit your business and make it harder to stand out from competitors.</p>
+                    <p><strong>Example:</strong> "San Francisco Web Design Company" is too specific and lacks brand appeal.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Ignoring Domain Availability</h3>
+                    <p>Failing to check domain availability can lead to expensive acquisitions or settling for poor alternatives.</p>
+                    <p><strong>Solution:</strong> Always check domain availability before finalizing your name.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Copying Competitors</h3>
+                    <p>Choosing names similar to competitors creates confusion and limits your brand's uniqueness.</p>
+                    <p><strong>Example:</strong> Creating "Facepage" when Facebook exists creates immediate comparison.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Overcomplicating Spelling</h3>
+                    <p>Creative spellings might seem unique but can make your name difficult to find and share.</p>
+                    <p><strong>Example:</strong> "Kreative" instead of "Creative" causes spelling confusion.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Neglecting Cultural Sensitivity</h3>
+                    <p>Names that work in one language or culture might have negative meanings in others.</p>
+                    <p><strong>Solution:</strong> Research your name across different languages and cultures.</p>
+                </div>
+                
+                <div class="mistake-card">
+                    <h3><i class="fas fa-times-circle"></i> Rushing the Process</h3>
+                    <p>Choosing a name too quickly can lead to regrets and expensive rebranding down the road.</p>
+                    <p><strong>Solution:</strong> Take time to research, test, and validate your name choice.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="container">
+        <p>GlanceName &copy; 2025 - How to Find the Perfect Brand Name</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to strategy cards
+            const strategyCards = document.querySelectorAll('.strategy-card');
+            strategyCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'var(--shadow)';
+                });
+            });
+
+            // Add animation to section titles on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all section titles and cards
+            const animatedElements = document.querySelectorAll('.section-title, .strategy-card, .industry-card, .tip-card, .process-step, .mistake-card');
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.5s ease';
+                observer.observe(element);
+            });
+
+            // Add subtle animation to checklist items
+            const checklistItems = document.querySelectorAll('.checklist li');
+            checklistItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.05}s`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover unique pet names for dogs, cats, and other furry friends. Find the perfect name with our creative ideas, name generator, and naming tips.">
+    <meta name="keywords" content="unique pet names, dog names, cat names, creative pet names, pet name generator, naming your pet, pet name ideas, funny pet names">
+    <meta name="author" content="GlanceName">
+    <title>Pet Names | GlanceName</title>
+           <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        .trend-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .trend-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trend-card h3 i {
+            font-size: 20px;
+        }
+
+        .trend-card p {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .trend-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .name-tag {
+            background: var(--light);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Pet Name Generator */
+        .generator-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .category-tab {
+            padding: 12px 20px;
+            background: var(--light);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid transparent;
+        }
+
+        .category-tab.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .category-tab:hover:not(.active) {
+            border-color: var(--primary);
+        }
+
+        .category-icon {
+            font-size: 18px;
+        }
+
+        .options-container {
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background: var(--gray-light);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray);
+            color: var(--white);
+        }
+
+        .results-container {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .results-count {
+            font-weight: 600;
+            color: var(--gray);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .name-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .name-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .name-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .name-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 30px;
+            display: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--gray-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card h3 i {
+            font-size: 18px;
+        }
+
+        .tip-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Pet Type Section */
+        .pet-type-section {
+            margin: 40px 0;
+        }
+
+        .pet-type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .pet-type-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .pet-type-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pet-type-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .pet-type-header i {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .pet-type-header h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .pet-type-content {
+            padding: 25px;
+        }
+
+        .pet-type-content ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        .pet-type-content li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pet-type-content li:last-child {
+            border-bottom: none;
+        }
+
+        .pet-type-content li i {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .category-tabs {
+                gap: 8px;
+            }
+            
+            .category-tab {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pet-type-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-signature"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Unique Pet Names: Finding the Perfect Name for Your Furry Friend</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h1 class="section-title">
+                <i class="fas fa-paw"></i>
+                Find the Perfect Name for Your Pet
+            </h1>
+            <p class="intro-text">
+                Choosing the right name for your pet is an important decision that will last a lifetime. 
+                Whether you're welcoming a new puppy, kitten, or any other furry friend, the perfect name 
+                should reflect their personality, appearance, and the special bond you share. Explore our 
+                creative ideas and name generator to find the ideal name for your companion.
+            </p>
+        </section>
+
+        <!-- Trends Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i>
+                Popular Pet Name Trends for 2025
+            </h2>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-utensils"></i> Food-Inspired Names</h3>
+                <p>Names based on food and drinks continue to be popular for their playful and endearing qualities.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">Biscuit</span>
+                    <span class="name-tag">Mochi</span>
+                    <span class="name-tag">Waffles</span>
+                    <span class="name-tag">Sushi</span>
+                    <span class="name-tag">Pickles</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-globe"></i> Nature-Inspired Names</h3>
+                <p>Names drawn from the natural world reflect our connection to the environment and create beautiful imagery.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">Willow</span>
+                    <span class="name-tag">River</span>
+                    <span class="name-tag">Sage</span>
+                    <span class="name-tag">Luna</span>
+                    <span class="name-tag">Storm</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-laugh"></i> Human Names</h3>
+                <p>Giving pets traditional human names adds a touch of humor and personality to our furry family members.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">Kevin</span>
+                    <span class="name-tag">Susan</span>
+                    <span class="name-tag">Gary</span>
+                    <span class="name-tag">Barbara</span>
+                    <span class="name-tag">Frank</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-crown"></i> Mythological Names</h3>
+                <p>Names from mythology and ancient stories add an epic and majestic quality to our pets.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">Zeus</span>
+                    <span class="name-tag">Athena</span>
+                    <span class="name-tag">Odin</span>
+                    <span class="name-tag">Freya</span>
+                    <span class="name-tag">Apollo</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pet Name Generator -->
+        <!-- <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-magic"></i>
+                Generate Unique Pet Name Ideas
+            </h2>
+            
+            <div class="generator-container">
+                <div class="category-tabs">
+                    <div class="category-tab active" data-category="dog">
+                        <i class="fas fa-dog category-icon"></i>
+                        Dog Names
+                    </div>
+                    <div class="category-tab" data-category="cat">
+                        <i class="fas fa-cat category-icon"></i>
+                        Cat Names
+                    </div>
+                    <div class="category-tab" data-category="funny">
+                        <i class="fas fa-laugh category-icon"></i>
+                        Funny Names
+                    </div>
+                    <div class="category-tab" data-category="unique">
+                        <i class="fas fa-star category-icon"></i>
+                        Unique Names
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="style">Name Style</label>
+                            <select id="style">
+                                <option value="modern">Modern</option>
+                                <option value="traditional">Traditional</option>
+                                <option value="cute">Cute</option>
+                                <option value="strong">Strong</option>
+                                <option value="elegant">Elegant</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="count">Number of Names</label>
+                            <select id="count">
+                                <option value="5">5 Names</option>
+                                <option value="10" selected>10 Names</option>
+                                <option value="15">15 Names</option>
+                                <option value="20">20 Names</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="theme">Keywords/Theme</label>
+                        <input type="text" id="theme" placeholder="e.g., nature, food, mythology, funny">
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button id="generate-btn" class="btn btn-primary">
+                        <i class="fas fa-magic"></i> Generate Pet Names
+                    </button>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Generating creative pet names...</p>
+                </div>
+
+                <div class="results-container" id="results-container">
+                    <div class="results-header">
+                        <h2 id="results-title">Generated Pet Names</h2>
+                        <div class="results-count" id="results-count">10 names generated</div>
+                    </div>
+                    <div class="results-grid" id="results-grid">
+                        <Names will be inserted here by JavaScript -
+                    </div>
+                    <div class="action-buttons">
+                        <button id="generate-more-btn" class="btn btn-secondary">
+                            <i class="fas fa-sync-alt"></i> Generate More
+                        </button>
+                        <button id="save-all-btn" class="btn btn-outline">
+                            <i class="fas fa-download"></i> Save All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+        <section class="pet-type-section">
+            <h2 class="section-title">
+                <i class="fas fa-paw"></i>
+                Names by Pet Type
+            </h2>
+            
+            <div class="pet-type-grid">
+                <div class="pet-type-card">
+                    <div class="pet-type-header">
+                        <i class="fas fa-dog"></i>
+                        <h3>Dog Names</h3>
+                        <p>Perfect names for your canine companion</p>
+                    </div>
+                    <div class="pet-type-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Strong names for large breeds</li>
+                            <li><i class="fas fa-check"></i> Cute names for small breeds</li>
+                            <li><i class="fas fa-check"></i> Energetic names for active dogs</li>
+                            <li><i class="fas fa-check"></i> Gentle names for calm dogs</li>
+                        </ul>
+                        <div class="trend-examples">
+                            <span class="name-tag">Max</span>
+                            <span class="name-tag">Bella</span>
+                            <span class="name-tag">Cooper</span>
+                            <span class="name-tag">Luna</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pet-type-card">
+                    <div class="pet-type-header">
+                        <i class="fas fa-cat"></i>
+                        <h3>Cat Names</h3>
+                        <p>Elegant names for your feline friend</p>
+                    </div>
+                    <div class="pet-type-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Mysterious names for independent cats</li>
+                            <li><i class="fas fa-check"></i> Playful names for energetic kittens</li>
+                            <li><i class="fas fa-check"></i> Regal names for dignified cats</li>
+                            <li><i class="fas fa-check"></i> Whimsical names for quirky personalities</li>
+                        </ul>
+                        <div class="trend-examples">
+                            <span class="name-tag">Luna</span>
+                            <span class="name-tag">Oliver</span>
+                            <span class="name-tag">Chloe</span>
+                            <span class="name-tag">Simba</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pet-type-card">
+                    <div class="pet-type-header">
+                        <i class="fas fa-kiwi-bird"></i>
+                        <h3>Other Pets</h3>
+                        <p>Creative names for all types of pets</p>
+                    </div>
+                    <div class="pet-type-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Clever names for birds</li>
+                            <li><i class="fas fa-check"></i> Colorful names for fish</li>
+                            <li><i class="fas fa-check"></i> Unique names for reptiles</li>
+                            <li><i class="fas fa-check"></i> Gentle names for small mammals</li>
+                        </ul>
+                        <div class="trend-examples">
+                            <span class="name-tag">Pippin</span>
+                            <span class="name-tag">Nibbles</span>
+                            <span class="name-tag">Splash</span>
+                            <span class="name-tag">Ziggy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    -->
+        <!-- Tips Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                Tips for Choosing the Perfect Pet Name
+            </h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><i class="fas fa-volume-up"></i> Easy to Pronounce</h3>
+                    <p>Choose a name that's easy to say and understand. Your pet will learn their name faster if it's clear and distinct.</p>
+                    <p>Avoid names that sound too similar to common commands like "sit" or "stay".</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-user"></i> Consider Personality</h3>
+                    <p>Wait a few days to observe your pet's personality before settling on a name.</p>
+                    <p>Their behavior, energy level, and unique quirks can inspire the perfect name that truly fits them.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-ruler"></i> Keep It Short</h3>
+                    <p>One or two syllable names are easier for pets to recognize and respond to.</p>
+                    <p>If you love a longer name, consider a shorter nickname for everyday use.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-users"></i> Family-Friendly</h3>
+                    <p>Make sure everyone in the family is comfortable saying the name.</p>
+                    <p>Avoid names that might be embarrassing to call out in public or around guests.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-history"></i> Think Long-Term</h3>
+                    <p>Choose a name that will still be appropriate as your pet grows older.</p>
+                    <p>A name that's cute for a puppy might not suit a full-grown dog.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-heart"></i> Personal Meaning</h3>
+                    <p>Consider names that have special meaning to you or your family.</p>
+                    <p>Names from favorite books, movies, or places can create a deeper connection.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="container">
+        <p>GlanceName &copy; 2025 - Unique Pet Names and Naming Resources</p>
+    </footer>
+
+    <script>
+        // Pet name generation data
+        const petNameData = {
+            dog: [
+                "Buddy", "Max", "Charlie", "Cooper", "Rocky", "Duke", "Bear", "Tucker", "Jack", "Bentley",
+                "Zeus", "Leo", "Milo", "Oscar", "Teddy", "Winston", "Sam", "Louie", "Jax", "Toby",
+                "Oliver", "Murphy", "Gus", "Moose", "Loki", "Bruno", "Dexter", "Henry", "Buster", "Finn",
+                "Maverick", "Riley", "Bo", "Diesel", "Harley", "Shadow", "Rex", "Apollo", "Bailey", "Bandit"
+            ],
+            cat: [
+                "Luna", "Bella", "Lucy", "Kitty", "Chloe", "Sophie", "Lily", "Milo", "Oliver", "Leo",
+                "Charlie", "Max", "Simba", "Jack", "Loki", "Oscar", "Jasper", "Tiger", "Sam", "Smokey",
+                "Shadow", "Gizmo", "Toby", "Angel", "Baby", "Bailey", "Bandit", "Bear", "Boots", "Buster",
+                "Cali", "Callie", "Casper", "Cleo", "Coco", "Cookie", "Daisy", "Felix", "Fluffy", "Garfield"
+            ],
+            funny: [
+                "Sir Barksalot", "Meowzilla", "Captain Cuddles", "Princess Fluffy", "Lord Snuggles", 
+                "Count Chocula", "Darth Furry", "Professor Purrington", "Bark Twain", "Fuzz Aldrin",
+                "Chewbacca", "Bilbo Waggins", "Sherlock Bones", "Mary Puppins", "Albus Dumbledog", 
+                "Fleas Witherspoon", "Bark Obama", "Dog Vader", "Kitty Purry", "Catniss Everclean",
+                "Furball", "Sir Licks-a-Lot", "Madame Floof", "Baron von Hiss", "Chairman Meow",
+                "Catrick Swayze", "Clawdia", "Fuzz Lightyear", "Hairy Potter", "Jabba the Mutt"
+            ],
+            unique: [
+                "Zephyr", "Nova", "Orion", "Lyra", "Kai", "Sage", "Juno", "Phoenix", "Indigo", "Caspian",
+                "Luna", "Atlas", "Jupiter", "Zen", "Rumi", "Koda", "Nala", "Zara", "Kairo", "Soren",
+                "Elara", "Cosmo", "Nyx", "Riven", "Sable", "Talon", "Vega", "Yara", "Zuri", "Kismet",
+                "Onyx", "Pippin", "Quasar", "Rune", "Saffron", "Tundra", "Umbra", "Vortex", "Willow", "Xena"
+            ]
+        };
+
+        // DOM Elements
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const generateBtn = document.getElementById('generate-btn');
+        const generateMoreBtn = document.getElementById('generate-more-btn');
+        const saveAllBtn = document.getElementById('save-all-btn');
+        const loadingElement = document.getElementById('loading');
+        const resultsContainer = document.getElementById('results-container');
+        const resultsGrid = document.getElementById('results-grid');
+        const resultsCount = document.getElementById('results-count');
+        const resultsTitle = document.getElementById('results-title');
+        
+        // Current category
+        let currentCategory = 'dog';
+
+        // Event Listeners
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update current category
+                currentCategory = this.getAttribute('data-category');
+            });
+        });
+
+        generateBtn.addEventListener('click', generatePetNames);
+        generateMoreBtn.addEventListener('click', generatePetNames);
+        saveAllBtn.addEventListener('click', saveAllNames);
+
+        // Function to generate pet names
+        function generatePetNames() {
+            // Show loading state
+            loadingElement.style.display = 'block';
+            resultsContainer.style.display = 'none';
+            
+            // Get form values
+            const style = document.getElementById('style').value;
+            const count = parseInt(document.getElementById('count').value);
+            const theme = document.getElementById('theme').value.toLowerCase();
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                const names = generatePetNameList(currentCategory, style, count, theme);
+                displayNames(names);
+                
+                // Update results title
+                const categoryNames = {
+                    dog: "Dog Names",
+                    cat: "Cat Names",
+                    funny: "Funny Pet Names",
+                    unique: "Unique Pet Names"
+                };
+                resultsTitle.textContent = `Generated ${categoryNames[currentCategory]}`;
+                
+                // Hide loading, show results
+                loadingElement.style.display = 'none';
+                resultsContainer.style.display = 'block';
+            }, 800);
+        }
+
+        // Function to generate pet name list based on parameters
+        function generatePetNameList(category, style, count, theme) {
+            const names = new Set();
+            const categoryData = petNameData[category];
+            
+            // Filter by theme if provided
+            let namePool = categoryData;
+            if (theme) {
+                namePool = categoryData.filter(name => 
+                    name.toLowerCase().includes(theme)
+                );
+                
+                // If no matches, use the full pool
+                if (namePool.length === 0) {
+                    namePool = categoryData;
+                }
+            }
+            
+            // Apply style filtering
+            if (style === 'cute') {
+                namePool = namePool.filter(name => 
+                    name.length <= 6 && 
+                    !name.includes(' ') && 
+                    /^[a-zA-Z]+$/.test(name)
+                );
+            } else if (style === 'strong') {
+                namePool = namePool.filter(name => 
+                    name.length >= 4 && 
+                    /^[A-Z]/.test(name) &&
+                    !name.toLowerCase().includes('fluffy') &&
+                    !name.toLowerCase().includes('baby')
+                );
+            } else if (style === 'elegant') {
+                namePool = namePool.filter(name => 
+                    name.length >= 4 && 
+                    /^[A-Z]/.test(name) &&
+                    !name.includes(' ') &&
+                    /^[a-zA-Z]+$/.test(name)
+                );
+            }
+            
+            // Generate unique names
+            while (names.size < count && names.size < namePool.length) {
+                const randomIndex = Math.floor(Math.random() * namePool.length);
+                names.add(namePool[randomIndex]);
+            }
+            
+            // If we need more names than available, add some variations
+            if (names.size < count) {
+                const additionalNames = generateAdditionalPetNames(category, count - names.size, theme);
+                additionalNames.forEach(name => names.add(name));
+            }
+            
+            return Array.from(names);
+        }
+
+        // Function to generate additional pet names when pool is exhausted
+        function generateAdditionalPetNames(category, count, theme) {
+            const additional = [];
+            const prefixes = ["Little", "Big", "Sweet", "Happy", "Brave", "Gentle", "Mighty", "Tiny"];
+            const suffixes = ["Paws", "Tail", "Whiskers", "Ears", "Nose", "Heart", "Friend", "Buddy"];
+            
+            for (let i = 0; i < count; i++) {
+                const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+                const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+                
+                let baseName = "";
+                if (category === 'dog') baseName = "Buddy";
+                else if (category === 'cat') baseName = "Whiskers";
+                else if (category === 'funny') baseName = "Fuzzy";
+                else if (category === 'unique') baseName = "Zen";
+                
+                // Apply theme if provided
+                if (theme) {
+                    if (theme === 'nature') baseName = "Leaf";
+                    else if (theme === 'food') baseName = "Cookie";
+                    else if (theme === 'mythology') baseName = "Zeus";
+                }
+                
+                additional.push(`${prefix} ${baseName} ${suffix}`);
+            }
+            
+            return additional;
+        }
+
+        // Function to display generated names
+        function displayNames(names) {
+            resultsGrid.innerHTML = '';
+            
+            names.forEach(name => {
+                const nameCard = document.createElement('div');
+                nameCard.className = 'name-card';
+                
+                nameCard.innerHTML = `
+                    <div class="name-text">${name}</div>
+                    <div class="name-actions">
+                        <button class="btn btn-outline btn-small copy-btn" data-name="${name}">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                `;
+                
+                resultsGrid.appendChild(nameCard);
+            });
+            
+            // Update results count
+            resultsCount.textContent = `${names.length} names generated`;
+            
+            // Add event listeners to copy buttons
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    navigator.clipboard.writeText(name).then(() => {
+                        // Show copied feedback
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    });
+                });
+            });
+        }
+
+        // Function to save all names
+        function saveAllNames() {
+            const nameElements = document.querySelectorAll('.name-text');
+            const names = Array.from(nameElements).map(el => el.textContent);
+            const text = names.join('\n');
+            
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${currentCategory}-pet-names.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Initialize the page with some names
+        window.addEventListener('DOMContentLoaded', () => {
+            // Generate some initial names
+            setTimeout(generatePetNames, 500);
+        });
+    </script>
+</body>
+</html>

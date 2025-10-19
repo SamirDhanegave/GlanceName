@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover hilarious and creative Wi-Fi name ideas that will make your network stand out. Get inspired with pop culture references, puns, and clever network names.">
+    <meta name="keywords" content="funny wifi names, creative wifi names, wifi name ideas, network names, pop culture wifi names, clever wifi names, wifi puns">
+    <meta name="author" content="GlanceName">
+    <title>Funny Wi-Fi Names | GlanceName</title>
+           <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Wi-Fi Name Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .category-header i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .category-header h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .category-content {
+            padding: 25px;
+        }
+
+        .wifi-name-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .wifi-name-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .wifi-name-item:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .wifi-name-text {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .copy-btn {
+            padding: 6px 12px;
+            background: transparent;
+            border: 1px solid var(--primary);
+            border-radius: var(--radius);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card h3 i {
+            font-size: 18px;
+        }
+
+        .tip-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Popular Culture Section */
+        .pop-culture-section {
+            margin: 40px 0;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .culture-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .culture-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .culture-icon {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .culture-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .culture-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .culture-name {
+            padding: 8px 12px;
+            background: var(--light);
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Security Tips */
+        .security-tips {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .security-tips h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .security-tips ul {
+            list-style-type: none;
+        }
+
+        .security-tips li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .security-tips li:last-child {
+            border-bottom: none;
+        }
+
+        .security-tips li i {
+            color: var(--secondary);
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+            
+            .wifi-name-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .copy-btn {
+                align-self: flex-end;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-header {
+                padding: 15px;
+            }
+            
+            .category-content {
+                padding: 20px;
+            }
+            
+            .tip-card {
+                padding: 20px;
+            }
+            
+            .security-tips {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-signature"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Funny Wi-Fi Names: Creative Ideas to Make Your Network Stand Out</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h1 class="section-title">
+                <i class="fas fa-wifi"></i>
+                Make Your Wi-Fi Network Unforgettable
+            </h1>
+            <p class="intro-text">
+                Your Wi-Fi network name is more than just an identifier—it's a chance to show off your personality, 
+                make your neighbors smile, and create a memorable digital footprint. From clever puns to pop culture 
+                references, discover creative Wi-Fi name ideas that will make your network the talk of the neighborhood.
+            </p>
+        </section>
+
+        <!-- Wi-Fi Name Categories -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-laugh"></i>
+                Hilarious Wi-Fi Name Categories
+            </h2>
+            
+            <div class="category-grid">
+                <!-- Pop Culture References -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-film"></i>
+                        <h3>Pop Culture References</h3>
+                        <p>TV, Movies & Internet Memes</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="wifi-name-list">
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Wu-Tang LAN</span>
+                                <button class="copy-btn" data-name="Wu-Tang LAN">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">The Promised LAN</span>
+                                <button class="copy-btn" data-name="The Promised LAN">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">LAN Solo</span>
+                                <button class="copy-btn" data-name="LAN Solo">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">The LAN Before Time</span>
+                                <button class="copy-btn" data-name="The LAN Before Time">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Silence of the LANs</span>
+                                <button class="copy-btn" data-name="Silence of the LANs">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Funny & Punny Names -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-grin-squint-tears"></i>
+                        <h3>Funny & Punny Names</h3>
+                        <p>Clever Wordplay & Humor</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="wifi-name-list">
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">It Hurts When IP</span>
+                                <button class="copy-btn" data-name="It Hurts When IP">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Pretty Fly for a Wi-Fi</span>
+                                <button class="copy-btn" data-name="Pretty Fly for a Wi-Fi">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Bill Wi the Science Fi</span>
+                                <button class="copy-btn" data-name="Bill Wi the Science Fi">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Loading...</span>
+                                <button class="copy-btn" data-name="Loading...">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Drop It Like It's Hotspot</span>
+                                <button class="copy-btn" data-name="Drop It Like It's Hotspot">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mysterious & Intriguing -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Mysterious & Intriguing</h3>
+                        <p>Create Some Mystery</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="wifi-name-list">
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">FBI Surveillance Van</span>
+                                <button class="copy-btn" data-name="FBI Surveillance Van">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">CIA Safe House</span>
+                                <button class="copy-btn" data-name="CIA Safe House">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Area 51 Test Network</span>
+                                <button class="copy-btn" data-name="Area 51 Test Network">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Witness Protection</span>
+                                <button class="copy-btn" data-name="Witness Protection">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Secret Government Network</span>
+                                <button class="copy-btn" data-name="Secret Government Network">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech & Geek Humor -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Tech & Geek Humor</h3>
+                        <p>For the Tech-Savvy</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="wifi-name-list">
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">404 Network Unavailable</span>
+                                <button class="copy-btn" data-name="404 Network Unavailable">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">The Internet</span>
+                                <button class="copy-btn" data-name="The Internet">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Searching...</span>
+                                <button class="copy-btn" data-name="Searching...">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Yell Password for Password</span>
+                                <button class="copy-btn" data-name="Yell Password for Password">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Router? I Hardly Know Her</span>
+                                <button class="copy-btn" data-name="Router? I Hardly Know Her">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food & Drink Themed -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Food & Drink Themed</h3>
+                        <p>Delicious Network Names</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="wifi-name-list">
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Nacho WiFi</span>
+                                <button class="copy-btn" data-name="Nacho WiFi">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">The LAN of Milk and Honey</span>
+                                <button class="copy-btn" data-name="The LAN of Milk and Honey">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Pizza WiFi 2.0</span>
+                                <button class="copy-btn" data-name="Pizza WiFi 2.0">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Send More Coffee</span>
+                                <button class="copy-btn" data-name="Send More Coffee">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Taco Tuesday Everyday</span>
+                                <button class="copy-btn" data-name="Taco Tuesday Everyday">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie & TV Show References -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-tv"></i>
+                        <h3>Movie & TV References</h3>
+                        <p>Entertainment Inspired</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="wifi-name-list">
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Winter is Coming</span>
+                                <button class="copy-btn" data-name="Winter is Coming">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">The Dark Knight Rises</span>
+                                <button class="copy-btn" data-name="The Dark Knight Rises">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Hogwarts Express</span>
+                                <button class="copy-btn" data-name="Hogwarts Express">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">Millennium Falcon</span>
+                                <button class="copy-btn" data-name="Millennium Falcon">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="wifi-name-item">
+                                <span class="wifi-name-text">The Matrix Has You</span>
+                                <button class="copy-btn" data-name="The Matrix Has You">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pop Culture Section -->
+        <section class="pop-culture-section">
+            <h2 class="section-title">
+                <i class="fas fa-film"></i>
+                Popular Culture Inspired Names
+            </h2>
+            
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-jedi"></i>
+                    </div>
+                    <h3>Star Wars</h3>
+                    <div class="culture-examples">
+                        <span class="culture-name">Death Star WiFi</span>
+                        <span class="culture-name">Jedi Temple Network</span>
+                        <span class="culture-name">Mos Eisley Cantina</span>
+                        <span class="culture-name">The Force is Strong</span>
+                    </div>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-hat-wizard"></i>
+                    </div>
+                    <h3>Harry Potter</h3>
+                    <div class="culture-examples">
+                        <span class="culture-name">Hogwarts Library</span>
+                        <span class="culture-name">Platform 9¾</span>
+                        <span class="culture-name">Room of Requirement</span>
+                        <span class="culture-name">The Leaky Cauldron</span>
+                    </div>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Lord of the Rings</h3>
+                    <div class="culture-examples">
+                        <span class="culture-name">One WiFi to Rule Them All</span>
+                        <span class="culture-name">Rivendell Retreat</span>
+                        <span class="culture-name">Mordor Free WiFi</span>
+                        <span class="culture-name">The Shire Connection</span>
+                    </div>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-mask"></i>
+                    </div>
+                    <h3>Marvel & DC</h3>
+                    <div class="culture-examples">
+                        <span class="culture-name">Avengers Tower</span>
+                        <span class="culture-name">Wayne Manor</span>
+                        <span class="culture-name">Stark Industries</span>
+                        <span class="culture-name">Batcave Network</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                Tips for Choosing the Perfect Wi-Fi Name
+            </h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><i class="fas fa-eye"></i> Keep It Visible</h3>
+                    <p>Choose a name that's easy to spot in a list of available networks, especially when you have guests over.</p>
+                    <p>Avoid names that blend in with generic defaults like "NETGEAR" or "Linksys".</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-user-friends"></i> Consider Your Audience</h3>
+                    <p>Think about who will see your Wi-Fi name—family, friends, neighbors, or coworkers.</p>
+                    <p>Avoid offensive or inappropriate names that might cause awkward situations.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-ruler"></i> Mind the Length</h3>
+                    <p>Most routers support up to 32 characters for SSID names, but shorter is often better.</p>
+                    <p>Long names can be difficult to read on mobile devices and may get cut off.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-search"></i> Avoid Personal Info</h3>
+                    <p>Never include personal information like your last name, address, or birth year.</p>
+                    <p>This helps maintain your privacy and security from potential threats.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-sync-alt"></i> Change It Occasionally</h3>
+                    <p>Refreshing your Wi-Fi name every now and then can be fun and adds an element of surprise.</p>
+                    <p>Seasonal names or current event references keep things interesting.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-theater-masks"></i> Reflect Your Personality</h3>
+                    <p>Your Wi-Fi name is a chance to express your interests, humor, or creativity.</p>
+                    <p>Choose something that genuinely represents you or makes you smile.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Tips -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-shield-alt"></i>
+                Wi-Fi Security Best Practices
+            </h2>
+            
+            <div class="security-tips">
+                <h3><i class="fas fa-lock"></i> Important Security Considerations</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Use Strong Passwords:</strong> Even with a funny name, always use a strong, unique password for your Wi-Fi network.
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Enable WPA3 Encryption:</strong> Use the latest security protocols to protect your network from unauthorized access.
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Hide Your Network:</strong> Consider hiding your SSID if you want extra privacy (though this isn't foolproof security).
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Regular Updates:</strong> Keep your router firmware updated to protect against security vulnerabilities.
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Guest Network:</strong> Set up a separate guest network with a different name for visitors.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="container">
+        <p>GlanceName &copy; 2025 - Creative Wi-Fi Names</p>
+    </footer>
+
+    <script>
+        // Copy functionality for Wi-Fi names
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add event listeners to all copy buttons
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const wifiName = this.getAttribute('data-name');
+                    
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(wifiName).then(() => {
+                        // Show feedback
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        this.style.background = 'var(--secondary)';
+                        this.style.borderColor = 'var(--secondary)';
+                        this.style.color = 'white';
+                        
+                        // Reset after 2 seconds
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.style.background = 'transparent';
+                            this.style.borderColor = 'var(--primary)';
+                            this.style.color = 'var(--primary)';
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                });
+            });
+
+            // Add hover effects to category cards
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'var(--shadow)';
+                });
+            });
+
+            // Add animation to section titles on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all section titles
+            const sectionTitles = document.querySelectorAll('.section-title');
+            sectionTitles.forEach(title => {
+                title.style.opacity = '0';
+                title.style.transform = 'translateY(20px)';
+                title.style.transition = 'all 0.5s ease';
+                observer.observe(title);
+            });
+        });
+    </script>
+</body>
+</html>

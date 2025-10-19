@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the top 100 baby names for 2025 with trends, meanings, and popularity analysis. Find the perfect name for your baby with our comprehensive guide.">
+    <meta name="keywords" content="baby names 2025, top baby names, name trends, name meanings, popular baby names, unique baby names, baby name generator">
+    <meta name="author" content="NameCraft">
+    <title>Top 100 Baby Names | NameCraft</title>
+     <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        .trend-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .trend-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trend-card h3 i {
+            font-size: 20px;
+        }
+
+        .trend-card p {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .trend-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .name-tag {
+            background: var(--light);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Names Grid */
+        .names-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .names-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .names-tab {
+            padding: 12px 20px;
+            background: var(--light);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid transparent;
+        }
+
+        .names-tab.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .names-tab:hover:not(.active) {
+            border-color: var(--primary);
+        }
+
+        .names-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .name-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .name-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .name-info {
+            flex: 1;
+        }
+
+        .name-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .name-meaning {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .name-rank {
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .name-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .search-container {
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus {
+            border-color: var(--primary);
+        }
+
+        .results-count {
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .names-tabs {
+                gap: 8px;
+            }
+            
+            .names-tab {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .names-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-signature"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Top 100 Baby Names for 2025: Trends and Meanings</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h1 class="section-title">
+                <i class="fas fa-baby"></i>
+                Baby Name Trends for 2025
+            </h1>
+            <p class="intro-text">
+                Welcome to our comprehensive guide to the most popular baby names predicted for 2025. 
+                Based on current trends, cultural shifts, and naming pattern analysis, we've compiled 
+                the top 100 names that are expected to dominate nurseries in the coming year. 
+                Discover the meanings, origins, and popularity trends for each name.
+            </p>
+        </section>
+
+        <!-- Trends Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i>
+                Key Naming Trends for 2025
+            </h2>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-leaf"></i> Nature-Inspired Names</h3>
+                <p>Names inspired by the natural world continue to rise in popularity, reflecting a growing environmental consciousness and desire for organic, peaceful imagery.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">River</span>
+                    <span class="name-tag">Willow</span>
+                    <span class="name-tag">Sage</span>
+                    <span class="name-tag">Ivy</span>
+                    <span class="name-tag">Jasper</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-history"></i> Vintage Revival</h3>
+                <p>Classic names from the early 20th century are making a strong comeback, offering timeless elegance with a nostalgic touch.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">Eleanor</span>
+                    <span class="name-tag">Arthur</span>
+                    <span class="name-tag">Clara</span>
+                    <span class="name-tag">Theodore</span>
+                    <span class="name-tag">Beatrice</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-globe-americas"></i> Cultural Diversity</h3>
+                <p>As the world becomes more interconnected, names from diverse cultural backgrounds are gaining popularity, celebrating global heritage.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">Santiago</span>
+                    <span class="name-tag">Amara</span>
+                    <span class="name-tag">Kai</span>
+                    <span class="name-tag">Zara</span>
+                    <span class="name-tag">Enzo</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-genderless"></i> Gender-Neutral Options</h3>
+                <p>Unisex names continue to grow in popularity as parents seek names that break traditional gender boundaries.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">Riley</span>
+                    <span class="name-tag">Jordan</span>
+                    <span class="name-tag">Avery</span>
+                    <span class="name-tag">Quinn</span>
+                    <span class="name-tag">Rowan</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Names List Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-list-ol"></i>
+                Top 100 Baby Names for 2025
+            </h2>
+            
+            <div class="names-container">
+                <div class="names-tabs">
+                    <div class="names-tab active" data-gender="all">
+                        <i class="fas fa-users"></i>
+                        All Names
+                    </div>
+                    <div class="names-tab" data-gender="girl">
+                        <i class="fas fa-female"></i>
+                        Girl Names
+                    </div>
+                    <div class="names-tab" data-gender="boy">
+                        <i class="fas fa-male"></i>
+                        Boy Names
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-box" id="name-search" placeholder="Search names or meanings...">
+                </div>
+                
+                <div class="results-count" id="results-count">Showing 100 names</div>
+                
+                <div class="names-grid" id="names-grid">
+                    <!-- Names will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="container">
+        <p>NameCraft &copy; 2025 - Baby Name Trends and Meanings | Data based on predictive analysis</p>
+    </footer>
+
+    <script>
+        // Baby names data with meanings and popularity
+        const babyNames = [
+            // Top 50 Girl Names
+            { name: "Olivia", gender: "girl", meaning: "Olive tree", rank: 1, origin: "Latin" },
+            { name: "Emma", gender: "girl", meaning: "Universal", rank: 2, origin: "German" },
+            { name: "Ava", gender: "girl", meaning: "Life", rank: 3, origin: "Latin" },
+            { name: "Charlotte", gender: "girl", meaning: "Free man", rank: 4, origin: "French" },
+            { name: "Sophia", gender: "girl", meaning: "Wisdom", rank: 5, origin: "Greek" },
+            { name: "Amelia", gender: "girl", meaning: "Work", rank: 6, origin: "Latin" },
+            { name: "Isabella", gender: "girl", meaning: "Devoted to God", rank: 7, origin: "Hebrew" },
+            { name: "Mia", gender: "girl", meaning: "Mine", rank: 8, origin: "Italian" },
+            { name: "Evelyn", gender: "girl", meaning: "Desired", rank: 9, origin: "English" },
+            { name: "Harper", gender: "girl", meaning: "Harp player", rank: 10, origin: "English" },
+            { name: "Luna", gender: "girl", meaning: "Moon", rank: 11, origin: "Latin" },
+            { name: "Camila", gender: "girl", meaning: "Young ceremonial attendant", rank: 12, origin: "Spanish" },
+            { name: "Gianna", gender: "girl", meaning: "God is gracious", rank: 13, origin: "Italian" },
+            { name: "Elizabeth", gender: "girl", meaning: "God is my oath", rank: 14, origin: "Hebrew" },
+            { name: "Eleanor", gender: "girl", meaning: "Bright, shining one", rank: 15, origin: "Greek" },
+            { name: "Ella", gender: "girl", meaning: "Beautiful fairy", rank: 16, origin: "English" },
+            { name: "Abigail", gender: "girl", meaning: "Father's joy", rank: 17, origin: "Hebrew" },
+            { name: "Sofia", gender: "girl", meaning: "Wisdom", rank: 18, origin: "Greek" },
+            { name: "Avery", gender: "girl", meaning: "Ruler of the elves", rank: 19, origin: "English" },
+            { name: "Scarlett", gender: "girl", meaning: "Red", rank: 20, origin: "English" },
+            { name: "Emily", gender: "girl", meaning: "Rival", rank: 21, origin: "Latin" },
+            { name: "Aria", gender: "girl", meaning: "Air; melody", rank: 22, origin: "Italian" },
+            { name: "Penelope", gender: "girl", meaning: "Weaver", rank: 23, origin: "Greek" },
+            { name: "Chloe", gender: "girl", meaning: "Young green shoot", rank: 24, origin: "Greek" },
+            { name: "Layla", gender: "girl", meaning: "Night", rank: 25, origin: "Arabic" },
+            { name: "Mila", gender: "girl", meaning: "Gracious", rank: 26, origin: "Slavic" },
+            { name: "Nora", gender: "girl", meaning: "Honor", rank: 27, origin: "Latin" },
+            { name: "Hazel", gender: "girl", meaning: "Hazel tree", rank: 28, origin: "English" },
+            { name: "Madison", gender: "girl", meaning: "Son of Matthew", rank: 29, origin: "English" },
+            { name: "Ellie", gender: "girl", meaning: "Shining light", rank: 30, origin: "English" },
+            { name: "Lily", gender: "girl", meaning: "Lily flower", rank: 31, origin: "English" },
+            { name: "Nova", gender: "girl", meaning: "New", rank: 32, origin: "Latin" },
+            { name: "Isla", gender: "girl", meaning: "Island", rank: 33, origin: "Scottish" },
+            { name: "Grace", gender: "girl", meaning: "Grace", rank: 34, origin: "Latin" },
+            { name: "Violet", gender: "girl", meaning: "Purple flower", rank: 35, origin: "Latin" },
+            { name: "Aurora", gender: "girl", meaning: "Dawn", rank: 36, origin: "Latin" },
+            { name: "Riley", gender: "girl", meaning: "Courageous", rank: 37, origin: "Irish" },
+            { name: "Zoey", gender: "girl", meaning: "Life", rank: 38, origin: "Greek" },
+            { name: "Willow", gender: "girl", meaning: "Willow tree", rank: 39, origin: "English" },
+            { name: "Emilia", gender: "girl", meaning: "Rival", rank: 40, origin: "Latin" },
+            { name: "Stella", gender: "girl", meaning: "Star", rank: 41, origin: "Latin" },
+            { name: "Zoe", gender: "girl", meaning: "Life", rank: 42, origin: "Greek" },
+            { name: "Victoria", gender: "girl", meaning: "Victory", rank: 43, origin: "Latin" },
+            { name: "Hannah", gender: "girl", meaning: "Grace", rank: 44, origin: "Hebrew" },
+            { name: "Addison", gender: "girl", meaning: "Son of Adam", rank: 45, origin: "English" },
+            { name: "Leah", gender: "girl", meaning: "Weary", rank: 46, origin: "Hebrew" },
+            { name: "Paisley", gender: "girl", meaning: "Church", rank: 47, origin: "Scottish" },
+            { name: "Savannah", gender: "girl", meaning: "Treeless plain", rank: 48, origin: "Spanish" },
+            { name: "Brooklyn", gender: "girl", meaning: "Broken land", rank: 49, origin: "English" },
+            { name: "Bella", gender: "girl", meaning: "Beautiful", rank: 50, origin: "Italian" },
+            
+            // Top 50 Boy Names
+            { name: "Liam", gender: "boy", meaning: "Strong-willed warrior", rank: 1, origin: "Irish" },
+            { name: "Noah", gender: "boy", meaning: "Rest, comfort", rank: 2, origin: "Hebrew" },
+            { name: "Oliver", gender: "boy", meaning: "Olive tree", rank: 3, origin: "Latin" },
+            { name: "Elijah", gender: "boy", meaning: "My God is Yahweh", rank: 4, origin: "Hebrew" },
+            { name: "William", gender: "boy", meaning: "Resolute protector", rank: 5, origin: "German" },
+            { name: "James", gender: "boy", meaning: "Supplanter", rank: 6, origin: "Hebrew" },
+            { name: "Benjamin", gender: "boy", meaning: "Son of the right hand", rank: 7, origin: "Hebrew" },
+            { name: "Lucas", gender: "boy", meaning: "Light", rank: 8, origin: "Latin" },
+            { name: "Henry", gender: "boy", meaning: "Ruler of the household", rank: 9, origin: "German" },
+            { name: "Alexander", gender: "boy", meaning: "Defender of mankind", rank: 10, origin: "Greek" },
+            { name: "Mason", gender: "boy", meaning: "Stone worker", rank: 11, origin: "English" },
+            { name: "Michael", gender: "boy", meaning: "Who is like God?", rank: 12, origin: "Hebrew" },
+            { name: "Ethan", gender: "boy", meaning: "Strong, firm", rank: 13, origin: "Hebrew" },
+            { name: "Daniel", gender: "boy", meaning: "God is my judge", rank: 14, origin: "Hebrew" },
+            { name: "Jacob", gender: "boy", meaning: "Supplanter", rank: 15, origin: "Hebrew" },
+            { name: "Logan", gender: "boy", meaning: "Little hollow", rank: 16, origin: "Scottish" },
+            { name: "Jackson", gender: "boy", meaning: "Son of Jack", rank: 17, origin: "English" },
+            { name: "Levi", gender: "boy", meaning: "Joined, attached", rank: 18, origin: "Hebrew" },
+            { name: "Sebastian", gender: "boy", meaning: "Venerable", rank: 19, origin: "Greek" },
+            { name: "Mateo", gender: "boy", meaning: "Gift of God", rank: 20, origin: "Spanish" },
+            { name: "Jack", gender: "boy", meaning: "God is gracious", rank: 21, origin: "English" },
+            { name: "Owen", gender: "boy", meaning: "Young warrior", rank: 22, origin: "Welsh" },
+            { name: "Theodore", gender: "boy", meaning: "Gift of God", rank: 23, origin: "Greek" },
+            { name: "Aiden", gender: "boy", meaning: "Little fire", rank: 24, origin: "Irish" },
+            { name: "Samuel", gender: "boy", meaning: "God has heard", rank: 25, origin: "Hebrew" },
+            { name: "Joseph", gender: "boy", meaning: "He will add", rank: 26, origin: "Hebrew" },
+            { name: "John", gender: "boy", meaning: "God is gracious", rank: 27, origin: "Hebrew" },
+            { name: "David", gender: "boy", meaning: "Beloved", rank: 28, origin: "Hebrew" },
+            { name: "Wyatt", gender: "boy", meaning: "Brave in war", rank: 29, origin: "English" },
+            { name: "Matthew", gender: "boy", meaning: "Gift of God", rank: 30, origin: "Hebrew" },
+            { name: "Luke", gender: "boy", meaning: "From Lucania", rank: 31, origin: "Greek" },
+            { name: "Asher", gender: "boy", meaning: "Happy, blessed", rank: 32, origin: "Hebrew" },
+            { name: "Carter", gender: "boy", meaning: "Cart driver", rank: 33, origin: "English" },
+            { name: "Julian", gender: "boy", meaning: "Youthful", rank: 34, origin: "Latin" },
+            { name: "Grayson", gender: "boy", meaning: "Son of the steward", rank: 35, origin: "English" },
+            { name: "Leo", gender: "boy", meaning: "Lion", rank: 36, origin: "Latin" },
+            { name: "Jayden", gender: "boy", meaning: "Thankful", rank: 37, origin: "Hebrew" },
+            { name: "Gabriel", gender: "boy", meaning: "God is my strength", rank: 38, origin: "Hebrew" },
+            { name: "Isaac", gender: "boy", meaning: "He will laugh", rank: 39, origin: "Hebrew" },
+            { name: "Lincoln", gender: "boy", meaning: "Town by the pool", rank: 40, origin: "English" },
+            { name: "Anthony", gender: "boy", meaning: "Priceless one", rank: 41, origin: "Latin" },
+            { name: "Hudson", gender: "boy", meaning: "Son of Hudd", rank: 42, origin: "English" },
+            { name: "Dylan", gender: "boy", meaning: "Son of the sea", rank: 43, origin: "Welsh" },
+            { name: "Ezra", gender: "boy", meaning: "Help", rank: 44, origin: "Hebrew" },
+            { name: "Thomas", gender: "boy", meaning: "Twin", rank: 45, origin: "Aramaic" },
+            { name: "Charles", gender: "boy", meaning: "Free man", rank: 46, origin: "German" },
+            { name: "Christopher", gender: "boy", meaning: "Bearer of Christ", rank: 47, origin: "Greek" },
+            { name: "Jaxon", gender: "boy", meaning: "Son of Jack", rank: 48, origin: "English" },
+            { name: "Maverick", gender: "boy", meaning: "Independent", rank: 49, origin: "English" },
+            { name: "Josiah", gender: "boy", meaning: "God supports", rank: 50, origin: "Hebrew" }
+        ];
+
+        // DOM Elements
+        const namesTabs = document.querySelectorAll('.names-tab');
+        const namesGrid = document.getElementById('names-grid');
+        const resultsCount = document.getElementById('results-count');
+        const searchBox = document.getElementById('name-search');
+
+        // Current filter
+        let currentGender = 'all';
+        let currentSearch = '';
+
+        // Event Listeners
+        namesTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                namesTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update current gender filter
+                currentGender = this.getAttribute('data-gender');
+                
+                // Update displayed names
+                displayNames();
+            });
+        });
+
+        searchBox.addEventListener('input', function() {
+            currentSearch = this.value.toLowerCase();
+            displayNames();
+        });
+
+        // Function to display names based on filters
+        function displayNames() {
+            // Filter names based on gender and search
+            let filteredNames = babyNames.filter(name => {
+                const matchesGender = currentGender === 'all' || name.gender === currentGender;
+                const matchesSearch = !currentSearch || 
+                    name.name.toLowerCase().includes(currentSearch) || 
+                    name.meaning.toLowerCase().includes(currentSearch) ||
+                    name.origin.toLowerCase().includes(currentSearch);
+                
+                return matchesGender && matchesSearch;
+            });
+
+            // Sort by rank
+            filteredNames.sort((a, b) => a.rank - b.rank);
+
+            // Clear the grid
+            namesGrid.innerHTML = '';
+
+            // Add names to the grid
+            filteredNames.forEach(name => {
+                const nameCard = document.createElement('div');
+                nameCard.className = 'name-card';
+                
+                nameCard.innerHTML = `
+                    <div class="name-info">
+                        <div class="name-text">
+                            <span class="name-rank">#${name.rank}</span> ${name.name}
+                        </div>
+                        <div class="name-meaning">
+                            ${name.meaning} • ${name.origin}
+                        </div>
+                    </div>
+                    <div class="name-actions">
+                        <button class="btn btn-outline copy-btn" data-name="${name.name}">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                `;
+                
+                namesGrid.appendChild(nameCard);
+            });
+            
+            // Update results count
+            const genderText = currentGender === 'all' ? '' : 
+                             currentGender === 'girl' ? 'girl ' : 'boy ';
+            resultsCount.textContent = `Showing ${filteredNames.length} ${genderText}names${currentSearch ? ` matching "${currentSearch}"` : ''}`;
+            
+            // Add event listeners to copy buttons
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    navigator.clipboard.writeText(name).then(() => {
+                        // Show copied feedback
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    });
+                });
+            });
+        }
+
+        // Initialize the page
+        window.addEventListener('DOMContentLoaded', () => {
+            displayNames();
+        });
+    </script>
+</body>
+</html>

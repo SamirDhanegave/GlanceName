@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover creative username ideas for gamers and streamers. Generate unique, catchy names for Twitch, YouTube, gaming platforms and social media.">
+    <meta name="keywords" content="gamer usernames, streamer names, creative usernames, gaming aliases, Twitch names, YouTube usernames, unique gamer tags, username generator">
+    <meta name="author" content="GlanceName">
+    <title>Creative Username Ideas for Gamers and Streamers | NameCraft</title>
+           <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        .trend-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .trend-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trend-card h3 i {
+            font-size: 20px;
+        }
+
+        .trend-card p {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .trend-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .name-tag {
+            background: var(--light);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Username Generator */
+        .generator-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .category-tab {
+            padding: 12px 20px;
+            background: var(--light);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid transparent;
+        }
+
+        .category-tab.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .category-tab:hover:not(.active) {
+            border-color: var(--primary);
+        }
+
+        .category-icon {
+            font-size: 18px;
+        }
+
+        .options-container {
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background: var(--gray-light);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray);
+            color: var(--white);
+        }
+
+        .results-container {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .results-count {
+            font-weight: 600;
+            color: var(--gray);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .name-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .name-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .name-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .name-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 30px;
+            display: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--gray-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card h3 i {
+            font-size: 18px;
+        }
+
+        .tip-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .category-tabs {
+                gap: 8px;
+            }
+            
+            .category-tab {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-signature"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Creative Username Ideas for Gamers and Streamers</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h1 class="section-title">
+                <i class="fas fa-gamepad"></i>
+                Stand Out with the Perfect Gaming Username
+            </h1>
+            <p class="intro-text">
+                Your username is your digital identity in the gaming world. It's how other players recognize you, 
+                how you build your brand as a streamer, and a reflection of your personality. Whether you're looking 
+                for something cool, funny, or completely unique, we've got creative username ideas for every type of gamer.
+            </p>
+        </section>
+
+        <!-- Trends Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i>
+                Popular Username Trends for 2025
+            </h2>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-robot"></i> Tech & Cyberpunk Inspired</h3>
+                <p>Names that evoke futuristic technology, AI, and cyberpunk aesthetics are increasingly popular, especially among sci-fi and competitive gamers.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">NeonGhost</span>
+                    <span class="name-tag">CyberPunk</span>
+                    <span class="name-tag">QuantumRider</span>
+                    <span class="name-tag">PixelWarrior</span>
+                    <span class="name-tag">DigitalPhoenix</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-crown"></i> Mythological & Fantasy</h3>
+                <p>Drawing from mythology, fantasy literature, and epic storytelling creates memorable and powerful usernames with rich backstories.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">MysticWolf</span>
+                    <span class="name-tag">ThunderStrike</span>
+                    <span class="name-tag">IceViper</span>
+                    <span class="name-tag">FireStorm</span>
+                    <span class="name-tag">DarkKnight</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-laugh"></i> Humorous & Ironic</h3>
+                <p>Funny usernames break the ice, show personality, and make gaming sessions more enjoyable for everyone involved.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">TacoTuesday</span>
+                    <span class="name-tag">CaptainObvious</span>
+                    <span class="name-tag">SirFartsALot</span>
+                    <span class="name-tag">BananaHammock</span>
+                    <span class="name-tag">DancingPotato</span>
+                </div>
+            </div>
+            
+            <div class="trend-card">
+                <h3><i class="fas fa-mask"></i> Mysterious & Enigmatic</h3>
+                <p>Names that create intrigue and mystery can be particularly effective for streamers building a brand around suspense or skill.</p>
+                <div class="trend-examples">
+                    <span class="name-tag">ShadowNinja</span>
+                    <span class="name-tag">PhantomAssassin</span>
+                    <span class="name-tag">StealthOperative</span>
+                    <span class="name-tag">SilentHunter</span>
+                    <span class="name-tag">GhostWalker</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Username Generator -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-magic"></i>
+                Generate Creative Username Ideas
+            </h2>
+            
+            <div class="generator-container">
+                <div class="category-tabs">
+                    <div class="category-tab active" data-category="cool">
+                        <i class="fas fa-snowflake category-icon"></i>
+                        Cool Names
+                    </div>
+                    <div class="category-tab" data-category="funny">
+                        <i class="fas fa-laugh category-icon"></i>
+                        Funny Names
+                    </div>
+                    <div class="category-tab" data-category="mysterious">
+                        <i class="fas fa-mask category-icon"></i>
+                        Mysterious
+                    </div>
+                    <div class="category-tab" data-category="tech">
+                        <i class="fas fa-robot category-icon"></i>
+                        Tech Inspired
+                    </div>
+                    <div class="category-tab" data-category="fantasy">
+                        <i class="fas fa-dragon category-icon"></i>
+                        Fantasy
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="style">Name Style</label>
+                            <select id="style">
+                                <option value="modern">Modern</option>
+                                <option value="edgy">Edgy</option>
+                                <option value="clever">Clever</option>
+                                <option value="simple">Simple</option>
+                                <option value="unique">Unique</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="count">Number of Names</label>
+                            <select id="count">
+                                <option value="5">5 Names</option>
+                                <option value="10" selected>10 Names</option>
+                                <option value="15">15 Names</option>
+                                <option value="20">20 Names</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="theme">Keywords/Theme</label>
+                        <input type="text" id="theme" placeholder="e.g., space, ninja, dragon, cyber">
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button id="generate-btn" class="btn btn-primary">
+                        <i class="fas fa-magic"></i> Generate Usernames
+                    </button>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Generating creative usernames...</p>
+                </div>
+
+                <div class="results-container" id="results-container">
+                    <div class="results-header">
+                        <h2 id="results-title">Generated Usernames</h2>
+                        <div class="results-count" id="results-count">10 usernames generated</div>
+                    </div>
+                    <div class="results-grid" id="results-grid">
+                        <!-- Names will be inserted here by JavaScript -->
+                    </div>
+                    <div class="action-buttons">
+                        <button id="generate-more-btn" class="btn btn-secondary">
+                            <i class="fas fa-sync-alt"></i> Generate More
+                        </button>
+                        <button id="save-all-btn" class="btn btn-outline">
+                            <i class="fas fa-download"></i> Save All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                Tips for Choosing the Perfect Username
+            </h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><i class="fas fa-check-circle"></i> Keep It Memorable</h3>
+                    <p>Choose a name that's easy to remember and pronounce. Avoid complicated spellings or excessive numbers.</p>
+                    <p>Your username should roll off the tongue and be easy for others to type when inviting you to games.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-search"></i> Check Availability</h3>
+                    <p>Before settling on a name, check its availability across all platforms you use (Twitch, YouTube, Discord, etc.).</p>
+                    <p>Consider using a username checker tool to see if your desired name is available everywhere at once.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-user-tag"></i> Reflect Your Personality</h3>
+                    <p>Your username should represent who you are as a gamer or streamer. Are you competitive, funny, strategic?</p>
+                    <p>Choose a name that gives viewers or fellow players a hint about your gaming style or content.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-expand-arrows-alt"></i> Consider Brand Potential</h3>
+                    <p>If you're planning to stream or create content, think about how your username will work as a brand.</p>
+                    <p>Is it suitable for logos, social media handles, and merchandise? Is it versatile enough to grow with your content?</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-clock"></i> Think Long-Term</h3>
+                    <p>Choose a name you'll be happy with for years. Changing usernames can confuse your audience and fragment your community.</p>
+                    <p>Avoid trends that might feel dated in a few years unless you're prepared to rebrand later.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-shield-alt"></i> Stay Appropriate</h3>
+                    <p>Avoid offensive, controversial, or inappropriate names that could limit your opportunities.</p>
+                    <p>Many platforms have strict content policies, and sponsors may avoid creators with questionable usernames.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="container">
+        <p>NameCraft &copy; 2025 - Creative Username Ideas for Gamers and Streamers</p>
+    </footer>
+
+    <script>
+        // Username generation data
+        const usernameData = {
+            cool: [
+                "ShadowNinja", "CyberPunk", "NeonGhost", "QuantumRider", "PixelWarrior", 
+                "DigitalPhoenix", "CosmicVoyager", "Starlight", "MysticWolf", "ThunderStrike",
+                "IceViper", "FireStorm", "DarkKnight", "SilverFox", "GoldenEagle", 
+                "CrimsonBlade", "AzureDragon", "EmeraldTiger", "SapphireWolf", "RubyPhoenix",
+                "MidnightRider", "DawnBreaker", "TwilightHunter", "SolarFlare", "LunarEclipse",
+                "GalacticHero", "NebulaWarrior", "AstralProjection", "CelestialBeing", "DivineIntervention",
+                "PhantomAssassin", "StealthOperative", "SilentHunter", "GhostWalker", "SpectreSniper",
+                "WraithWarrior", "ShadowBlade", "DarkAssassin", "NightStalker", "StealthNinja"
+            ],
+            funny: [
+                "TacoTuesday", "PizzaLover42", "CaptainObvious", "SirFartsALot", "BananaHammock", 
+                "DancingPotato", "UnicornWhisperer", "NachoAverageUser", "LordOfTheFries", "CheeseWizard",
+                "Error404NameNotFound", "IncredibleBulk", "MomSaidImCool", "NotBatman", "ProbablySleeping", 
+                "SendMoreCoffee", "TalkWordyToMe", "ThisIsMyUsername", "UndercoverBroccoli", "WittyUsername",
+                "AFKBrbPizza", "BeerAndPretzels", "CaffeineFiend", "DontPanic42", "EatSleepGameRepeat", 
+                "FridgeRaider", "GoogleItForMe", "HoldMyBeer", "IPromiseImWorking", "JustHereForTheFood",
+                "KittenWhisperer", "LikesLongWalks", "MightBeASquirrel", "NoIdeaWhatImDoing", "OneMoreEpisode", 
+                "ProfessionalProcrastinator", "QuestionableLifeChoices", "RamenNoodleMaster", "StillLoading", "TheRealMcLovin"
+            ],
+            mysterious: [
+                "ShadowWalker", "PhantomGhost", "SilentAssassin", "DarkMystery", "HiddenBlade",
+                "EclipseHunter", "MidnightPhantom", "VeiledStranger", "EnigmaCode", "CipherKey",
+                "WhisperingShadow", "FadingEcho", "UnseenForce", "GhostInTheMachine", "DigitalWraith",
+                "CyberSpectre", "BinaryPhantom", "CodeNinja", "StealthProtocol", "SilentProtocol",
+                "NightCrawler", "TwilightAssassin", "DuskHunter", "ShadowReaper", "VoidWalker",
+                "AbyssGazer", "EternalMystery", "SecretKeeper", "UnknownEntity", "FacelessOne",
+                "NamelessWarrior", "IdentityCrisis", "ForgottenSoul", "LostLegend", "MythicShadow",
+                "LegendaryPhantom", "EpicEnigma", "MysticVoyager", "ArcaneTraveler", "OccultScholar"
+            ],
+            tech: [
+                "NeonCircuit", "BinaryBeast", "CodeBreaker", "DataStream", "CyberCore",
+                "QuantumBit", "PixelPioneer", "DigitalDynamo", "TechTitan", "AIAssassin",
+                "NeuralNetwork", "AlgorithmAce", "FirewallPhoenix", "EncryptionKing", "DecryptionQueen",
+                "ServerSurfer", "CloudRider", "DataMiner", "CodeCrusher", "BugHunter",
+                "DebugMaster", "SyntaxSniper", "ProgramPirate", "ScriptSlinger", "ByteBuster",
+                "RAMRaider", "CPUCrusher", "GPUGamer", "MotherboardMage", "HardDriveHero",
+                "SoftwareSamurai", "FirmwareFighter", "OSOverlord", "KernelKnight", "DriverDuelist",
+                "InterfaceInfiltrator", "ProtocolProwler", "NetworkNinja", "BandwidthBandit", "LatencyLegend"
+            ],
+            fantasy: [
+                "DragonSlayer", "MysticMage", "ArcaneArcher", "SpellSlinger", "Enchantress",
+                "SorcererSupreme", "WizardWarrior", "DruidDreamer", "ClericCaster", "PaladinProtector",
+                "NecromancerNinja", "RuneReader", "GlyphGuardian", "TomeTamer", "ScrollSage",
+                "PotionMaster", "AlchemyAdept", "Elementalist", "SummonerSage", "ConjurerKing",
+                "Illusionist", "Chronomancer", "Pyromancer", "Cryomancer", "Aeromancer",
+                "Geomancer", "Hydromancer", "Necromancer", "Biomancer", "Technomancer",
+                "DragonRider", "GriffinTamer", "PhoenixFriend", "UnicornUpholder", "PegasusPilot",
+                "KrakenKeeper", "LeviathanLord", "BehemothBuster", "TitanTamer", "GiantGuardian"
+            ]
+        };
+
+        // DOM Elements
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const generateBtn = document.getElementById('generate-btn');
+        const generateMoreBtn = document.getElementById('generate-more-btn');
+        const saveAllBtn = document.getElementById('save-all-btn');
+        const loadingElement = document.getElementById('loading');
+        const resultsContainer = document.getElementById('results-container');
+        const resultsGrid = document.getElementById('results-grid');
+        const resultsCount = document.getElementById('results-count');
+        const resultsTitle = document.getElementById('results-title');
+        
+        // Current category
+        let currentCategory = 'cool';
+
+        // Event Listeners
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update current category
+                currentCategory = this.getAttribute('data-category');
+            });
+        });
+
+        generateBtn.addEventListener('click', generateUsernames);
+        generateMoreBtn.addEventListener('click', generateUsernames);
+        saveAllBtn.addEventListener('click', saveAllUsernames);
+
+        // Function to generate usernames
+        function generateUsernames() {
+            // Show loading state
+            loadingElement.style.display = 'block';
+            resultsContainer.style.display = 'none';
+            
+            // Get form values
+            const style = document.getElementById('style').value;
+            const count = parseInt(document.getElementById('count').value);
+            const theme = document.getElementById('theme').value.toLowerCase();
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                const usernames = generateUsernameList(currentCategory, style, count, theme);
+                displayUsernames(usernames);
+                
+                // Update results title
+                const categoryNames = {
+                    cool: "Cool Usernames",
+                    funny: "Funny Usernames",
+                    mysterious: "Mysterious Usernames",
+                    tech: "Tech-Inspired Usernames",
+                    fantasy: "Fantasy Usernames"
+                };
+                resultsTitle.textContent = `Generated ${categoryNames[currentCategory]}`;
+                
+                // Hide loading, show results
+                loadingElement.style.display = 'none';
+                resultsContainer.style.display = 'block';
+            }, 800);
+        }
+
+        // Function to generate username list based on parameters
+        function generateUsernameList(category, style, count, theme) {
+            const usernames = new Set();
+            const categoryData = usernameData[category];
+            
+            // Filter by theme if provided
+            let namePool = categoryData;
+            if (theme) {
+                namePool = categoryData.filter(name => 
+                    name.toLowerCase().includes(theme)
+                );
+                
+                // If no matches, use the full pool
+                if (namePool.length === 0) {
+                    namePool = categoryData;
+                }
+            }
+            
+            // Generate unique usernames
+            while (usernames.size < count && usernames.size < namePool.length) {
+                const randomIndex = Math.floor(Math.random() * namePool.length);
+                usernames.add(namePool[randomIndex]);
+            }
+            
+            // If we need more names than available, add some variations
+            if (usernames.size < count) {
+                const additionalNames = generateAdditionalUsernames(category, count - usernames.size, theme);
+                additionalNames.forEach(name => usernames.add(name));
+            }
+            
+            return Array.from(usernames);
+        }
+
+        // Function to generate additional usernames when pool is exhausted
+        function generateAdditionalUsernames(category, count, theme) {
+            const additional = [];
+            const prefixes = ["The", "Epic", "Legendary", "Pro", "Ultimate", "Mega", "Super", "Hyper"];
+            const suffixes = ["Master", "Lord", "King", "Queen", "Warrior", "Hunter", "Slayer", "Expert"];
+            
+            for (let i = 0; i < count; i++) {
+                const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+                const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+                
+                let baseName = "";
+                if (category === 'cool') baseName = "Shadow";
+                else if (category === 'funny') baseName = "Taco";
+                else if (category === 'mysterious') baseName = "Phantom";
+                else if (category === 'tech') baseName = "Cyber";
+                else if (category === 'fantasy') baseName = "Dragon";
+                
+                // Apply theme if provided
+                if (theme) {
+                    if (theme === 'space') baseName = "Cosmic";
+                    else if (theme === 'ninja') baseName = "Shadow";
+                    else if (theme === 'dragon') baseName = "Dragon";
+                    else if (theme === 'cyber') baseName = "Cyber";
+                }
+                
+                additional.push(`${prefix}${baseName}${suffix}`);
+            }
+            
+            return additional;
+        }
+
+        // Function to display generated usernames
+        function displayUsernames(usernames) {
+            resultsGrid.innerHTML = '';
+            
+            usernames.forEach(username => {
+                const nameCard = document.createElement('div');
+                nameCard.className = 'name-card';
+                
+                nameCard.innerHTML = `
+                    <div class="name-text">${username}</div>
+                    <div class="name-actions">
+                        <button class="btn btn-outline btn-small copy-btn" data-name="${username}">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                `;
+                
+                resultsGrid.appendChild(nameCard);
+            });
+            
+            // Update results count
+            resultsCount.textContent = `${usernames.length} usernames generated`;
+            
+            // Add event listeners to copy buttons
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    navigator.clipboard.writeText(name).then(() => {
+                        // Show copied feedback
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    });
+                });
+            });
+        }
+
+        // Function to save all usernames
+        function saveAllUsernames() {
+            const nameElements = document.querySelectorAll('.name-text');
+            const names = Array.from(nameElements).map(el => el.textContent);
+            const text = names.join('\n');
+            
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${currentCategory}-usernames.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Initialize the page with some usernames
+        window.addEventListener('DOMContentLoaded', () => {
+            // Generate some initial usernames
+            setTimeout(generateUsernames, 500);
+        });
+    </script>
+</body>
+</html>

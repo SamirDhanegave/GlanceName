@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate business names, brand names, baby names & username ideas instantly. Free AI-powered startup name ideas, YouTube names & more. No signup, unlimited!">
+    <meta name="keywords" content="name generator, free name generator, business name generator, brand name generator, baby name generator, username generator, startup name ideas, youtube name generator, username ideas, free name generator, company name generator, Best Free Business Name Generator, startup name generator, brand name generator, Online AI Business Name Generator, Catchy Startup Name Ideas for 2025, Brand Name Generator with Domain Availability, Creative Company Name Generator">
+    <meta name="author" content="GlanceName" />
+    
+      <!-- Canonical URL -->
+    <link rel="canonical" href="https://glancename.com/">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "GlanceName",
+        "url": "https://glancename.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://glancename.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "description": "Professional naming strategies and name generation tools"
+    }
+    </script>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="js/clean-urls.js" as="script">
+    <link rel="preload" href="js/navigation.js" as="script">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="GlanceName - Free AI-Powered Name Generator" />
+    <meta property="og:description" content="Generate creative names for businesses, brands, babies, and more. Completely free, no signup required." />
+    <meta property="og:url" content="https://glancename.com/" />
+    <meta property="og:type" content="website" />
+    
+    <title>GlanceName</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 20px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Generator Section */
+        .generator {
+            margin-bottom: 40px;
+        }
+
+        .generator-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 1000px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .category-tab {
+            padding: 12px 20px;
+            background: var(--light);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid transparent;
+        }
+
+        .category-tab.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .category-tab:hover:not(.active) {
+            border-color: var(--primary);
+        }
+
+        .category-icon {
+            font-size: 18px;
+        }
+
+        .options-container {
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--gray-light);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray);
+            color: var(--white);
+        }
+
+        .results-container {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .results-count {
+            font-weight: 600;
+            color: var(--gray);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .name-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .name-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .name-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .name-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 30px;
+            display: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--gray-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Features Section */
+        .features {
+            margin: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            margin: 80px 0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .blog-card h3 {
+            font-size: 20px;
+            color: var(--dark);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .blog-tag {
+            background: var(--light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .read-more:hover {
+            gap: 12px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .footer-nav {
+            margin-bottom: 15px;
+        }
+
+        .footer-nav a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .footer-nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .category-tabs {
+                gap: 8px;
+            }
+            
+            .category-tab {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .nav-buttons {
+                gap: 10px;
+            }
+            
+            .nav-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .features-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+            
+            .section-header h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .generator-container {
+                padding: 20px;
+            }
+            
+            .category-tab {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+            
+            .feature-icon {
+                font-size: 36px;
+            }
+            
+            .blog-image {
+                height: 150px;
+            }
+            
+            .blog-content {
+                padding: 20px;
+            }
+        }
+
+        /* Responsive styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .logo {
+        font-size: 28px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Main styles matching your original design */
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #10b981;
+    --dark: #1f2937;
+    --light: #f9fafb;
+    --gray: #6b7280;
+    --gray-light: #e5e7eb;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--light);
+    padding-bottom: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    padding: 30px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 36px;
+}
+
+.tagline {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.main-nav {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: var(--radius);
+    transition: all 0.3s;
+}
+
+.nav-menu a:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 0;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 25px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: var(--gray-light);
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background: var(--gray);
+    color: var(--white);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Featured Guides */
+.featured-guides {
+    margin-bottom: 40px;
+}
+
+.featured-guides h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: var(--dark);
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.guide-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.guide-card p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--gray-light);
+    color: var(--gray);
+}
+
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-signature"></i>
+                    <span>GlanceName</span>
+                </div>
+                <p class="tagline">Generate creative names for any purpose - completely free!</p>
+                <div class="nav-buttons">
+                    <a href="./" class="nav-btn active">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <!-- <a href="./blog" class="nav-btn">
+                        <i class="fas fa-blog"></i>
+                        Blog
+                    </a> -->
+                    <a href="privacy.html" class="nav-btn">
+                        <i class="fas fa-shield-alt"></i>
+                        Privacy Policy
+                    </a>
+                    <a href="about.html" class="nav-btn">
+                        <i class="fas fa-info-circle"></i>
+                        About
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Generator Section -->
+    <section class="generator">
+        <div class="container">
+            <div class="generator-container">
+                <div class="category-tabs">
+                    <div class="category-tab active" data-category="personal">
+                        <i class="fas fa-user category-icon"></i>
+                        Personal Names
+                    </div>
+                    <div class="category-tab" data-category="baby">
+                        <i class="fas fa-baby category-icon"></i>
+                        Baby Names
+                    </div>
+                    <div class="category-tab" data-category="character">
+                        <i class="fas fa-mask category-icon"></i>
+                        Character Names
+                    </div>
+                    <div class="category-tab" data-category="pet">
+                        <i class="fas fa-paw category-icon"></i>
+                        Pet Names
+                    </div>
+                    <div class="category-tab" data-category="place">
+                        <i class="fas fa-map-marker-alt category-icon"></i>
+                        Place Names
+                    </div>
+                    <div class="category-tab" data-category="business">
+                        <i class="fas fa-briefcase category-icon"></i>
+                        Business Names
+                    </div>
+                    <div class="category-tab" data-category="username">
+                        <i class="fas fa-at category-icon"></i>
+                        Usernames
+                    </div>
+                    <div class="category-tab" data-category="wifi">
+                        <i class="fas fa-wifi category-icon"></i>
+                        Wi-Fi Names
+                    </div>
+                </div>
+
+                <div class="options-container">
+                    <div class="form-group">
+                        <label for="gender" id="gender-label">Gender</label>
+                        <select id="gender">
+                            <option value="any">Any</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="style">Style</label>
+                            <select id="style">
+                                <option value="modern">Modern</option>
+                                <option value="traditional">Traditional</option>
+                                <option value="unique">Unique</option>
+                                <option value="popular">Popular</option>
+                                <option value="creative">Creative</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="count">Number of Names</label>
+                            <select id="count">
+                                <option value="5">5 Names</option>
+                                <option value="10" selected>10 Names</option>
+                                <option value="15">15 Names</option>
+                                <option value="20">20 Names</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="theme-container">
+                        <label for="theme">Theme/Keywords</label>
+                        <input type="text" id="theme" placeholder="e.g., nature, fantasy, tech, funny">
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button id="generate-btn" class="btn btn-primary">
+                        <i class="fas fa-magic"></i> Generate Names
+                    </button>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Generating creative names...</p>
+                </div>
+
+                <div class="results-container" id="results-container">
+                    <div class="results-header">
+                        <h2 id="results-title">Generated Names</h2>
+                        <div class="results-count" id="results-count">25 names generated</div>
+                    </div>
+                    <div class="results-grid" id="results-grid">
+                        <!-- Names will be inserted here by JavaScript -->
+                    </div>
+                    <div class="action-buttons">
+                        <button id="generate-more-btn" class="btn btn-secondary">
+                            <i class="fas fa-sync-alt"></i> Generate More
+                        </button>
+                        <button id="save-all-btn" class="btn btn-outline">
+                            <i class="fas fa-download"></i> Save All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose GlanceName?</h2>
+                <p>Discover the features that make our name generator the perfect tool for all your naming needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Generate hundreds of creative names in seconds with our optimized AI algorithms</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Unlimited Use</h3>
+                    <p>No usage limits, no paywalls, no subscriptions. Generate as many names as you need</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Privacy First</h3>
+                    <p>We don't store your personal data or require sign-ups. Your creativity remains private</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diverse Categories</h3>
+                    <p>From business names to baby names, we cover all your naming needs in one place</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+       <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest From Our Blog</h2>
+                <p>Discover expert tips, creative strategies, and insights for perfect naming</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>March 15, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8 min read</span>
+                            </div>
+                        </div>
+                        <h3>How to Choose a Perfect Business Name That People Remember</h3>
+                        <p>Learn the art and science of selecting business names that stick in people's minds and drive brand recognition with our expert guide.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Business</span>
+                            <span class="blog-tag">Naming</span>
+                            <span class="blog-tag">Branding</span>
+                        </div>
+                        <a href="business-name.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>March 10, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                        <h3>Top 100 Baby Names for 2025: Trends and Meanings</h3>
+                        <p>Discover the most popular and meaningful baby names for the coming year, with insights into cultural trends and name origins.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Baby Names</span>
+                            <span class="blog-tag">Trends</span>
+                            <span class="blog-tag">Parenting</span>
+                        </div>
+                        <a href="baby-name.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>March 5, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                        <h3>Creative Username Ideas for Gamers and Streamers</h3>
+                        <p>Level up your online presence with unique and memorable username ideas that stand out in the gaming community.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Gaming</span>
+                            <span class="blog-tag">Usernames</span>
+                            <span class="blog-tag">Creative</span>
+                        </div>
+                        <a href="game-username.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- New Blog Cards Start Here -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 28, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                        <h3>Unique Pet Names: Finding the Perfect Name for Your Furry Friend</h3>
+                        <p>Discover creative and meaningful names for your pets that reflect their personality and your special bond.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Pets</span>
+                            <span class="blog-tag">Animal Names</span>
+                            <span class="blog-tag">Creative</span>
+                        </div>
+                        <a href="pet-name.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 25, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>9 min read</span>
+                            </div>
+                        </div>
+                        <h3>Fantasy Character Names: Creating Memorable Heroes and Villains</h3>
+                        <p>Learn how to craft compelling character names that bring your fantasy worlds to life and captivate your readers.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Writing</span>
+                            <span class="blog-tag">Fantasy</span>
+                            <span class="blog-tag">Characters</span>
+                        </div>
+                        <a href="fantasy-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 22, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>4 min read</span>
+                            </div>
+                        </div>
+                        <h3>Funny Wi-Fi Names: Creative Ideas to Make Your Network Stand Out</h3>
+                        <p>Get inspired with hilarious and clever Wi-Fi name ideas that will make your neighbors smile and your network memorable.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Wi-Fi</span>
+                            <span class="blog-tag">Humor</span>
+                            <span class="blog-tag">Tech</span>
+                        </div>
+                        <a href="wifi-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 18, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                        <h3>Creative Place Names for Your Next Writing Project or Game</h3>
+                        <p>Discover techniques for creating believable and immersive place names that enhance your world-building efforts.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">World Building</span>
+                            <span class="blog-tag">Writing</span>
+                            <span class="blog-tag">Geography</span>
+                        </div>
+                        <a href="place-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 15, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8 min read</span>
+                            </div>
+                        </div>
+                        <h3>Startup Name Generator: How to Find the Perfect Brand Name</h3>
+                        <p>Learn the process of generating and selecting startup names that capture your vision and attract customers.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Startups</span>
+                            <span class="blog-tag">Branding</span>
+                            <span class="blog-tag">Entrepreneurship</span>
+                        </div>
+                        <a href="startup-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 12, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                        <h3>YouTube Channel Names: How to Choose One That Gets Views</h3>
+                        <p>Discover strategies for selecting YouTube channel names that are memorable, searchable, and reflect your content.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">YouTube</span>
+                            <span class="blog-tag">Content Creation</span>
+                            <span class="blog-tag">Branding</span>
+                        </div>
+                        <a href="youtube-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-mask"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 8, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                        <h3>Superhero Names: Creating Iconic Aliases for Your Characters</h3>
+                        <p>Learn the art of crafting superhero names that convey power, mystery, and heroism for your comic or story.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Superheroes</span>
+                            <span class="blog-tag">Comics</span>
+                            <span class="blog-tag">Creative Writing</span>
+                        </div>
+                        <a href="superhero-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 5, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                        <h3>Restaurant Name Ideas: How to Choose a Name That Attracts Customers</h3>
+                        <p>Discover creative restaurant name ideas that reflect your cuisine, ambiance, and target audience.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Restaurant</span>
+                            <span class="blog-tag">Food</span>
+                            <span class="blog-tag">Business</span>
+                        </div>
+                        <a href="restaurant-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>February 1, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                        <h3>Fashion Brand Names: Creating a Memorable Identity in the Industry</h3>
+                        <p>Learn how to choose fashion brand names that resonate with your target market and stand out in a crowded industry.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Fashion</span>
+                            <span class="blog-tag">Branding</span>
+                            <span class="blog-tag">Business</span>
+                        </div>
+                        <a href="fashion-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 28, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                        <h3>Band Name Generator: Finding the Perfect Name for Your Music Group</h3>
+                        <p>Discover creative approaches to naming your band that capture your sound and attract fans.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Music</span>
+                            <span class="blog-tag">Bands</span>
+                            <span class="blog-tag">Creative</span>
+                        </div>
+                        <a href="band-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 25, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8 min read</span>
+                            </div>
+                        </div>
+                        <h3>Tech Company Names: Modern and Memorable Ideas for 2025</h3>
+                        <p>Explore naming strategies for technology companies that convey innovation and reliability in the digital age.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Technology</span>
+                            <span class="blog-tag">Startups</span>
+                            <span class="blog-tag">Innovation</span>
+                        </div>
+                        <a href="tech-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 22, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                        <h3>Book Title Ideas: How to Choose a Title That Sells Copies</h3>
+                        <p>Learn the psychology behind successful book titles and how to choose one that grabs readers' attention.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Writing</span>
+                            <span class="blog-tag">Books</span>
+                            <span class="blog-tag">Publishing</span>
+                        </div>
+                        <a href="book-titles.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 18, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                        <h3>Creative Studio Names: Building a Brand in the Arts Industry</h3>
+                        <p>Discover how to name your creative studio to reflect your artistic vision and attract the right clients.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Art</span>
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-tag">Creative Business</span>
+                        </div>
+                        <a href="studio-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 15, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                        <h3>Domain Name Availability: How to Check and Secure Your Perfect Name</h3>
+                        <p>Learn the essential steps for checking domain name availability and securing your online presence.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Domains</span>
+                            <span class="blog-tag">Web Development</span>
+                            <span class="blog-tag">Online Business</span>
+                        </div>
+                        <a href="domain-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 12, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                        <h3>Academic Names: Choosing the Right Name for Your Research or Project</h3>
+                        <p>Discover how to select professional and appropriate names for academic projects, research papers, and scholarly work.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Academia</span>
+                            <span class="blog-tag">Research</span>
+                            <span class="blog-tag">Education</span>
+                        </div>
+                        <a href="academic-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 8, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                        <h3>Eco-Friendly Brand Names: Sustainable Business Naming Strategies</h3>
+                        <p>Learn how to choose names for eco-friendly businesses that communicate sustainability and environmental values.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Sustainability</span>
+                            <span class="blog-tag">Eco-Friendly</span>
+                            <span class="blog-tag">Green Business</span>
+                        </div>
+                        <a href="eco-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>January 5, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                        <h3>Royal and Noble Names: Historical Inspiration for Character Naming</h3>
+                        <p>Explore historical royal names and titles to create authentic noble characters for your stories and games.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">History</span>
+                            <span class="blog-tag">Royalty</span>
+                            <span class="blog-tag">Character Design</span>
+                        </div>
+                        <a href="royal-names.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="footer-nav">
+            <a href="./">Home</a>
+           
+            <a href="./privacy">Privacy Policy</a>
+            <a href="./about">About</a>
+        </div>
+        <p>GlanceName &copy; 2025 - Free name generator tool | No signups, no payments</p>
+    </footer>
+
+    <script>
+        // Expanded name generation data for each category
+        const nameData = {
+            personal: {
+                male: ["James", "Michael", "Robert", "John", "David", "William", "Richard", "Joseph", "Thomas", "Christopher", "Daniel", "Matthew", "Anthony", "Donald", "Mark", "Paul", "Steven", "Andrew", "Kenneth", "Joshua"],
+                female: ["Mary", "Jennifer", "Linda", "Patricia", "Elizabeth", "Susan", "Jessica", "Sarah", "Karen", "Nancy", "Margaret", "Lisa", "Betty", "Dorothy", "Sandra", "Ashley", "Kimberly", "Donna", "Emily", "Michelle"],
+                neutral: ["Alex", "Jordan", "Taylor", "Casey", "Jamie", "Morgan", "Riley", "Avery", "Quinn", "Rowan", "Skyler", "Peyton", "Dakota", "Reese", "Sawyer", "Hayden", "Kai", "Charlie", "Finley", "Emerson"],
+                surnames: ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin"]
+            },
+            baby: {
+                male: ["Liam", "Noah", "Oliver", "Elijah", "William", "James", "Benjamin", "Lucas", "Henry", "Alexander", "Mason", "Michael", "Ethan", "Daniel", "Jacob", "Logan", "Jackson", "Levi", "Sebastian", "Mateo"],
+                female: ["Emma", "Olivia", "Ava", "Isabella", "Sophia", "Charlotte", "Mia", "Amelia", "Harper", "Evelyn", "Abigail", "Emily", "Elizabeth", "Mila", "Ella", "Avery", "Sofia", "Camila", "Aria", "Scarlett"],
+                neutral: ["Riley", "Avery", "Jordan", "Peyton", "Quinn", "Blake", "Rowan", "Emerson", "Finley", "Sawyer", "Sage", "Charlie", "Morgan", "Dakota", "Reese", "Hayden", "Kai", "Alex", "Taylor", "Casey"]
+            },
+            character: {
+                fantasy: ["Aelar", "Briar", "Cassian", "Darian", "Eldrin", "Fenris", "Gideon", "Kaelen", "Lysander", "Orion", "Thorne", "Zephyr", "Alistair", "Balthazar", "Cedric", "Draven", "Evander", "Finnian", "Gareth", "Hawthorne"],
+                scifi: ["Zara", "Jax", "Nova", "Kael", "Lyra", "Rex", "Soren", "Vega", "Zen", "Orion", "Astra", "Cypher", "Draco", "Echo", "Flux", "Gideon", "Helix", "Iris", "Jett", "Kylo"],
+                modern: ["Chase", "Skyler", "Phoenix", "Blake", "Harper", "Riley", "Jordan", "Alex", "Taylor", "Morgan", "Dakota", "Casey", "Avery", "Quinn", "Rowan", "Sawyer", "Peyton", "Emerson", "Finley", "Hayden"]
+            },
+            pet: {
+                dog: ["Buddy", "Max", "Charlie", "Cooper", "Rocky", "Duke", "Bear", "Tucker", "Jack", "Bentley", "Zeus", "Leo", "Milo", "Oscar", "Teddy", "Winston", "Sam", "Louie", "Jax", "Toby"],
+                cat: ["Luna", "Bella", "Lucy", "Kitty", "Chloe", "Sophie", "Lily", "Milo", "Oliver", "Leo", "Charlie", "Max", "Simba", "Jack", "Loki", "Oscar", "Jasper", "Tiger", "Sam", "Smokey"],
+                funny: ["Sir Barksalot", "Meowzilla", "Captain Cuddles", "Princess Fluffy", "Lord Snuggles", "Count Chocula", "Darth Furry", "Professor Purrington", "Bark Twain", "Fuzz Aldrin"]
+            },
+            place: {
+                fantasy: ["Eldoria", "Mysthaven", "Silverwood", "Dragonreach", "Shadowfen", "Frostfall", "Sunstone", "Ravencrest", "Ironforge", "Whisperwind", "Stormpeak", "Moonshadow", "Dawnridge", "Nightshade", "Fireglen", "Icecrown", "Stonekeep", "Windmere", "Thunderfall", "Lightspire"],
+                modern: ["Crestview", "Maple Creek", "Pine Valley", "Riverbend", "Lakewood", "Hillside", "Oakhaven", "Brookfield", "Stonebridge", "Greenwood", "Springfield", "Fairview", "Cedar Grove", "Willow Creek", "Elm Street", "Park Avenue", "Main Street", "Broadway", "Washington", "Jefferson"]
+            },
+            business: {
+                tech: ["NexusTech", "CodeCraft", "InnovateLabs", "PixelForge", "DataSphere", "CloudSync", "AppVenture", "TechNova", "DigitalPulse", "ByteWorks", "QuantumLeap", "CyberCore", "NetSolutions", "WebWeavers", "LogicLane", "FutureForge", "SmartSystems", "IntelliTech", "PrecisionData", "StreamlineIO"],
+                creative: ["ArtisanStudio", "CreativeMinds", "VisionaryWorks", "DesignCove", "ImagineLab", "CanvasCraft", "IdeaForge", "SparkStudio", "DreamWeavers", "InspireCo", "ColorSplash", "PalettePerfection", "Brushstroke", "EaselEdge", "CanvasCreations", "PaintPot", "ArtAttack", "CreativeCanvas", "DesignDen", "StyleStudio"]
+            },
+            username: {
+                cool: ["ShadowNinja", "CyberPunk", "NeonGhost", "QuantumRider", "PixelWarrior", "DigitalPhoenix", "CosmicVoyager", "Starlight", "MysticWolf", "ThunderStrike", "IceViper", "FireStorm", "DarkKnight", "SilverFox", "GoldenEagle", "CrimsonBlade", "AzureDragon", "EmeraldTiger", "SapphireWolf", "RubyPhoenix"],
+                funny: ["TacoTuesday", "PizzaLover42", "CaptainObvious", "SirFartsALot", "BananaHammock", "DancingPotato", "UnicornWhisperer", "NachoAverageUser", "LordOfTheFries", "CheeseWizard", "Error404NameNotFound", "IncredibleBulk", "MomSaidImCool", "NotBatman", "ProbablySleeping", "SendMoreCoffee", "TalkWordyToMe", "ThisIsMyUsername", "UndercoverBroccoli", "WittyUsername"]
+            },
+            wifi: {
+                funny: ["FBI Surveillance Van", "It Hurts When IP", "Pretty Fly for a Wi-Fi", "Bill Wi the Science Fi", "Loading...", "The Promised LAN", "No More Mister Wi-Fi", "Drop It Like It's Hotspot", "The LAN Before Time", "Wu-Tang LAN", "Tell My Wi-Fi Love Her", "Abraham Linksys", "Martin Router King", "LAN Solo", "The Password is 1234"],
+                clever: ["The Internet", "Silence of the LANs", "Router? I Hardly Know Her", "This LAN Is My LAN", "Searching...", "The Password is 1234", "Tell My Wi-Fi Love Her", "Abraham Linksys", "Martin Router King", "LAN Solo", "Wu-Tang LAN", "The Promised LAN", "No More Mister Wi-Fi", "Drop It Like It's Hotspot", "The LAN Before Time"]
+            }
+        };
+
+        // DOM Elements
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const generateBtn = document.getElementById('generate-btn');
+        const generateMoreBtn = document.getElementById('generate-more-btn');
+        const saveAllBtn = document.getElementById('save-all-btn');
+        const loadingElement = document.getElementById('loading');
+        const resultsContainer = document.getElementById('results-container');
+        const resultsGrid = document.getElementById('results-grid');
+        const resultsCount = document.getElementById('results-count');
+        const resultsTitle = document.getElementById('results-title');
+        const genderSelect = document.getElementById('gender');
+        const genderLabel = document.getElementById('gender-label');
+        
+        // Current category
+        let currentCategory = 'personal';
+
+        // Event Listeners
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update current category
+                currentCategory = this.getAttribute('data-category');
+                
+                // Update UI based on category
+                updateUIForCategory();
+            });
+        });
+
+        generateBtn.addEventListener('click', generateNames);
+        generateMoreBtn.addEventListener('click', generateNames);
+        saveAllBtn.addEventListener('click', saveAllNames);
+
+        // Function to update UI based on selected category
+        function updateUIForCategory() {
+            // Update gender label and options for certain categories
+            if (currentCategory === 'personal' || currentCategory === 'baby') {
+                genderLabel.textContent = 'Gender';
+                genderSelect.innerHTML = `
+                    <option value="any">Any</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="neutral">Neutral</option>
+                `;
+                genderSelect.style.display = 'block';
+            } else if (currentCategory === 'character') {
+                genderLabel.textContent = 'Character Type';
+                genderSelect.innerHTML = `
+                    <option value="fantasy">Fantasy</option>
+                    <option value="scifi">Sci-Fi</option>
+                    <option value="modern">Modern</option>
+                `;
+                genderSelect.style.display = 'block';
+            } else if (currentCategory === 'pet') {
+                genderLabel.textContent = 'Pet Type';
+                genderSelect.innerHTML = `
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="funny">Funny</option>
+                `;
+                genderSelect.style.display = 'block';
+            } else {
+                genderSelect.style.display = 'none';
+                genderLabel.textContent = 'Type';
+            }
+            
+            // Update theme placeholder
+            const themeInput = document.getElementById('theme');
+            if (currentCategory === 'wifi') {
+                themeInput.placeholder = "e.g., funny, clever, pop culture";
+            } else if (currentCategory === 'username') {
+                themeInput.placeholder = "e.g., cool, funny, gamer, professional";
+            } else {
+                themeInput.placeholder = "e.g., nature, fantasy, tech, funny";
+            }
+        }
+
+        // Function to generate names
+        function generateNames() {
+            // Show loading state
+            loadingElement.style.display = 'block';
+            resultsContainer.style.display = 'none';
+            
+            // Get form values
+            const gender = genderSelect.value;
+            const style = document.getElementById('style').value;
+            const count = parseInt(document.getElementById('count').value);
+            const theme = document.getElementById('theme').value;
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                const names = generateNameList(currentCategory, gender, style, count, theme);
+                displayNames(names);
+                
+                // Update results title
+                const categoryNames = {
+                    personal: "Personal Names",
+                    baby: "Baby Names",
+                    character: "Character Names",
+                    pet: "Pet Names",
+                    place: "Place Names",
+                    business: "Business Names",
+                    username: "Usernames",
+                    wifi: "Wi-Fi Names"
+                };
+                resultsTitle.textContent = `Generated ${categoryNames[currentCategory]}`;
+                
+                // Hide loading, show results
+                loadingElement.style.display = 'none';
+                resultsContainer.style.display = 'block';
+            }, 800);
+        }
+
+        // Function to generate names based on parameters
+        function generateNameList(category, gender, style, count, theme) {
+            const names = new Set();
+            const categoryData = nameData[category];
+            
+            // Determine which name pool to use
+            let namePool = [];
+            
+            if (category === 'personal' || category === 'baby') {
+                if (gender === 'male') {
+                    namePool = categoryData.male;
+                } else if (gender === 'female') {
+                    namePool = categoryData.female;
+                } else if (gender === 'neutral') {
+                    namePool = categoryData.neutral;
+                } else {
+                    // Combine all for 'any'
+                    namePool = [...categoryData.male, ...categoryData.female, ...categoryData.neutral];
+                }
+                
+                // For personal names, sometimes add surnames
+                if (category === 'personal' && Math.random() > 0.3) {
+                    const surnames = categoryData.surnames;
+                    for (let i = 0; i < count; i++) {
+                        const firstName = getRandomElement(namePool);
+                        const lastName = getRandomElement(surnames);
+                        names.add(`${firstName} ${lastName}`);
+                        if (names.size >= count) break;
+                    }
+                } else {
+                    // Just first names
+                    while (names.size < count) {
+                        names.add(getRandomElement(namePool));
+                    }
+                }
+            } else if (category === 'character' || category === 'pet' || category === 'wifi' || category === 'username') {
+                // Use the specific type (gender parameter repurposed)
+                namePool = categoryData[gender] || categoryData.funny || categoryData.cool;
+                
+                while (names.size < count) {
+                    names.add(getRandomElement(namePool));
+                }
+            } else if (category === 'place' || category === 'business') {
+                // Use style to determine which name pool
+                namePool = categoryData[style] || categoryData.fantasy || categoryData.tech;
+                
+                while (names.size < count) {
+                    names.add(getRandomElement(namePool));
+                }
+            }
+            
+            return Array.from(names);
+        }
+
+        // Function to display generated names
+        function displayNames(names) {
+            resultsGrid.innerHTML = '';
+            
+            names.forEach(name => {
+                const nameCard = document.createElement('div');
+                nameCard.className = 'name-card';
+                
+                nameCard.innerHTML = `
+                    <div class="name-text">${name}</div>
+                    <div class="name-actions">
+                        <button class="btn btn-outline btn-small copy-btn" data-name="${name}">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                `;
+                
+                resultsGrid.appendChild(nameCard);
+            });
+            
+            // Update results count
+            resultsCount.textContent = `${names.length} names generated`;
+            
+            // Add event listeners to copy buttons
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    navigator.clipboard.writeText(name).then(() => {
+                        // Show copied feedback
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    });
+                });
+            });
+        }
+
+        // Function to save all names
+        function saveAllNames() {
+            const nameElements = document.querySelectorAll('.name-text');
+            const names = Array.from(nameElements).map(el => el.textContent);
+            const text = names.join('\n');
+            
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${currentCategory}-names.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Helper function to get random element from array
+        function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        // Initialize the UI for the default category
+        window.addEventListener('DOMContentLoaded', () => {
+            updateUIForCategory();
+            // Generate some initial names
+            setTimeout(generateNames, 500);
+            
+            // Fix navigation active states
+            updateActiveNav();
+            
+            // Add blog card animations
+            animateBlogCards();
+        });
+
+        // Function to update active navigation state
+        function updateActiveNav() {
+            const currentPath = window.location.pathname;
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            navButtons.forEach(button => {
+                const href = button.getAttribute('href');
+                button.classList.remove('active');
+                
+                // Check if current path matches the href
+                if (currentPath === href || 
+                    (currentPath === '/' && (href === './' || href === '/')) ||
+                    (currentPath.endsWith('/blog') && href === './blog') ||
+                    (currentPath.endsWith('/privacy') && href === './privacy') ||
+                    (currentPath.endsWith('/about') && href === './about')) {
+                    button.classList.add('active');
+                }
+            });
+        }
+
+        // Function to animate blog cards on scroll
+        function animateBlogCards() {
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            blogCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease';
+                observer.observe(card);
+            });
+        }
+
+        // Clean URL management
+document.addEventListener('DOMContentLoaded', function() {
+    // Remove .html from all internal links
+    const links = document.querySelectorAll('a[href$=".html"]');
+    links.forEach(link => {
+        const cleanUrl = link.getAttribute('href').replace('.html', '');
+        link.setAttribute('href', cleanUrl);
+    });
+
+    // Update current URL if it has .html
+    if (window.history && window.history.pushState) {
+        const currentPath = window.location.pathname;
+        if (currentPath.endsWith('.html')) {
+            const cleanPath = currentPath.replace('.html', '');
+            window.history.replaceState(null, null, cleanPath);
+        }
+    }
+
+    // Handle 404 pages by redirecting to clean URLs
+    if (document.title.includes('404')) {
+        const currentPath = window.location.pathname;
+        if (currentPath.endsWith('.html')) {
+            const cleanPath = currentPath.replace('.html', '');
+            window.location.href = cleanPath;
+        }
+    }
+});
+
+// main.js - Organized version
+class GlanceNameApp {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.initializeApp();
+        });
+    }
+
+    initializeApp() {
+        console.log('GlanceName website initialized');
+        
+        this.initializeNavigation();
+        this.initializeCopyright();
+        this.initializeAnalytics();
+        this.initializeCleanUrls();
+    }
+
+    initializeNavigation() {
+        // Highlight current page
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            if (currentPath === linkPath || currentPath === linkPath + '/') {
+                link.classList.add('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    initializeCopyright() {
+        const yearElement = document.querySelector('footer p');
+        if (yearElement && yearElement.textContent.includes('2025')) {
+            const currentYear = new Date().getFullYear();
+            yearElement.textContent = yearElement.textContent.replace('2025', currentYear);
+        }
+    }
+
+    initializeAnalytics() {
+        // Google Analytics initialization
+        if (typeof gtag !== 'undefined') {
+            gtag('config', 'GA_MEASUREMENT_ID');
+        }
+        
+        // Track page views
+        this.trackPageView();
+    }
+
+    initializeCleanUrls() {
+        // Remove .html from internal links (client-side fallback)
+        const links = document.querySelectorAll('a[href$=".html"]');
+        links.forEach(link => {
+            const cleanUrl = link.getAttribute('href').replace('.html', '');
+            link.setAttribute('href', cleanUrl);
+        });
+    }
+
+    trackPageView() {
+        // Custom page view tracking
+        const pageData = {
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: window.location.pathname
+        };
+        
+        console.log('Page view:', pageData);
+        
+        // Send to analytics if configured
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', pageData);
+        }
+    }
+}
+
+// Initialize the application
+new GlanceNameApp();
+
+// Load configuration
+fetch('/config/site-config.json')
+  .then(response => response.json())
+  .then(config => {
+    window.siteConfig = config;
+    initializeSiteWithConfig();
+  });
+
+function initializeSiteWithConfig() {
+  const config = window.siteConfig;
+  
+  // Set page title and meta description
+  const currentPath = window.location.pathname;
+  const pageSeo = config.seo.pages[currentPath];
+  
+  if (pageSeo) {
+    document.title = pageSeo.title;
+    
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', pageSeo.description);
+    }
+    
+}
+  
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover creative place names for fantasy worlds, sci-fi settings, and fictional locations. Get inspired with naming conventions and world-building tips for writers and game developers.">
+    <meta name="keywords" content="creative place names, fantasy locations, world building, writing inspiration, game development, fictional places, location names, RPG settings">
+    <meta name="author" content="GlanceName">
+    <title>Creative Place Names | GlanceName</title>
+           <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 24px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Place Name Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .fantasy-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        .sci-fi-header {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+        }
+
+        .mystical-header {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+        }
+
+        .natural-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .ancient-header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .dark-header {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
+
+        .category-header i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .category-header h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .category-content {
+            padding: 25px;
+        }
+
+        .place-name-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .place-name-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .place-name-item:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .place-name-text {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .copy-btn {
+            padding: 6px 12px;
+            background: transparent;
+            border: 1px solid var(--primary);
+            border-radius: var(--radius);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* World Building Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card h3 i {
+            font-size: 18px;
+        }
+
+        .tip-card p {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* Location Types Section */
+        .location-types {
+            margin: 40px 0;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .location-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .location-icon {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .location-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .location-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .location-name {
+            padding: 8px 12px;
+            background: var(--light);
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        /* Naming Conventions */
+        .conventions-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+
+        .conventions-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .conventions-section ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .conventions-section li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .conventions-section li:last-child {
+            border-bottom: none;
+        }
+
+        .conventions-section li i {
+            color: var(--secondary);
+            font-size: 18px;
+        }
+
+        /* Cultural Inspiration */
+        .culture-section {
+            margin: 40px 0;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .culture-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .culture-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .culture-icon {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .culture-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .culture-card p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .culture-examples {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .intro-text {
+                font-size: 16px;
+            }
+            
+            .place-name-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .copy-btn {
+                align-self: flex-end;
+            }
+            
+            .conventions-section ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-header {
+                padding: 15px;
+            }
+            
+            .category-content {
+                padding: 20px;
+            }
+            
+            .tip-card {
+                padding: 20px;
+            }
+            
+            .conventions-section {
+                padding: 20px;
+            }
+            
+            .culture-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-signature"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Creative Place Names for Your Next Writing Project or Game</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h1 class="section-title">
+                <i class="fas fa-map-marked-alt"></i>
+                Crafting Memorable Fictional Locations
+            </h1>
+            <p class="intro-text">
+                The names you choose for places in your fictional worlds can transport readers and players, 
+                evoke emotions, and build immersive environments. Whether you're writing a fantasy novel, 
+                developing a game, or creating an RPG campaign, the right place names can make your world 
+                feel alive and authentic. Explore creative naming ideas and world-building techniques below.
+            </p>
+        </section>
+
+        <!-- Place Name Categories -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-mountain"></i>
+                Creative Place Name Categories
+            </h2>
+            
+            <div class="category-grid">
+                <!-- Fantasy Locations -->
+                <div class="category-card">
+                    <div class="category-header fantasy-header">
+                        <i class="fas fa-dragon"></i>
+                        <h3>Fantasy Locations</h3>
+                        <p>Magical Kingdoms & Enchanted Lands</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="place-name-list">
+                            <div class="place-name-item">
+                                <span class="place-name-text">Eldoria</span>
+                                <button class="copy-btn" data-name="Eldoria">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Silverwood Forest</span>
+                                <button class="copy-btn" data-name="Silverwood Forest">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Dragonreach</span>
+                                <button class="copy-btn" data-name="Dragonreach">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Mysthaven</span>
+                                <button class="copy-btn" data-name="Mysthaven">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Ravencrest</span>
+                                <button class="copy-btn" data-name="Ravencrest">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sci-Fi Settlements -->
+                <div class="category-card">
+                    <div class="category-header sci-fi-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Sci-Fi Settlements</h3>
+                        <p>Futuristic Cities & Space Colonies</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="place-name-list">
+                            <div class="place-name-item">
+                                <span class="place-name-text">Nexus Prime</span>
+                                <button class="copy-btn" data-name="Nexus Prime">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Cyberspire</span>
+                                <button class="copy-btn" data-name="Cyberspire">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Aether Station</span>
+                                <button class="copy-btn" data-name="Aether Station">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Quantum Reach</span>
+                                <button class="copy-btn" data-name="Quantum Reach">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Neo-Tokyo</span>
+                                <button class="copy-btn" data-name="Neo-Tokyo">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mystical Realms -->
+                <div class="category-card">
+                    <div class="category-header mystical-header">
+                        <i class="fas fa-hat-wizard"></i>
+                        <h3>Mystical Realms</h3>
+                        <p>Enchanted Places & Magical Sites</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="place-name-list">
+                            <div class="place-name-item">
+                                <span class="place-name-text">Whisperwind Valley</span>
+                                <button class="copy-btn" data-name="Whisperwind Valley">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Moonshadow Grove</span>
+                                <button class="copy-btn" data-name="Moonshadow Grove">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Starlight Sanctuary</span>
+                                <button class="copy-btn" data-name="Starlight Sanctuary">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Dreamweaver's Glade</span>
+                                <button class="copy-btn" data-name="Dreamweaver's Glade">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Ethereal Falls</span>
+                                <button class="copy-btn" data-name="Ethereal Falls">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Natural Landscapes -->
+                <div class="category-card">
+                    <div class="category-header natural-header">
+                        <i class="fas fa-tree"></i>
+                        <h3>Natural Landscapes</h3>
+                        <p>Mountains, Forests & Waterways</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="place-name-list">
+                            <div class="place-name-item">
+                                <span class="place-name-text">Crimson Peaks</span>
+                                <button class="copy-btn" data-name="Crimson Peaks">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Shadowfen Marsh</span>
+                                <button class="copy-btn" data-name="Shadowfen Marsh">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Sunstone Ridge</span>
+                                <button class="copy-btn" data-name="Sunstone Ridge">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Azure River</span>
+                                <button class="copy-btn" data-name="Azure River">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Emberwood Forest</span>
+                                <button class="copy-btn" data-name="Emberwood Forest">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ancient Ruins -->
+                <div class="category-card">
+                    <div class="category-header ancient-header">
+                        <i class="fas fa-monument"></i>
+                        <h3>Ancient Ruins</h3>
+                        <p>Lost Cities & Forgotten Temples</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="place-name-list">
+                            <div class="place-name-item">
+                                <span class="place-name-text">Sunken Atlantis</span>
+                                <button class="copy-btn" data-name="Sunken Atlantis">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">The Forgotten Temple</span>
+                                <button class="copy-btn" data-name="The Forgotten Temple">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Ruins of Eldar</span>
+                                <button class="copy-btn" data-name="Ruins of Eldar">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Ancient Ziggurat</span>
+                                <button class="copy-btn" data-name="Ancient Ziggurat">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">The Crumbled Citadel</span>
+                                <button class="copy-btn" data-name="The Crumbled Citadel">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark & Foreboding -->
+                <div class="category-card">
+                    <div class="category-header dark-header">
+                        <i class="fas fa-skull"></i>
+                        <h3>Dark & Foreboding</h3>
+                        <p>Haunted Places & Cursed Lands</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="place-name-list">
+                            <div class="place-name-item">
+                                <span class="place-name-text">Shadowfell</span>
+                                <button class="copy-btn" data-name="Shadowfell">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">The Bleak Mountains</span>
+                                <button class="copy-btn" data-name="The Bleak Mountains">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Dreadmoor Swamp</span>
+                                <button class="copy-btn" data-name="Dreadmoor Swamp">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">Ashen Wastes</span>
+                                <button class="copy-btn" data-name="Ashen Wastes">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="place-name-item">
+                                <span class="place-name-text">The Cursed Valley</span>
+                                <button class="copy-btn" data-name="The Cursed Valley">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Types Section -->
+        <section class="location-types">
+            <h2 class="section-title">
+                <i class="fas fa-city"></i>
+                Location Types & Naming Patterns
+            </h2>
+            
+            <div class="location-grid">
+                <div class="location-card">
+                    <div class="location-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Mountains & Peaks</h3>
+                    <div class="location-examples">
+                        <span class="location-name">Dragon's Tooth Peak</span>
+                        <span class="location-name">Thunderhead Mountain</span>
+                        <span class="location-name">Crystal Spire</span>
+                        <span class="location-name">Ironfang Ridge</span>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Rivers & Lakes</h3>
+                    <div class="location-examples">
+                        <span class="location-name">Silverstream River</span>
+                        <span class="location-name">Mirror Lake</span>
+                        <span class="location-name">Rapids of Fate</span>
+                        <span class="location-name">Whispering Brook</span>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-icon">
+                        <i class="fas fa-forest"></i>
+                    </div>
+                    <h3>Forests & Woods</h3>
+                    <div class="location-examples">
+                        <span class="location-name">Elderwood Forest</span>
+                        <span class="location-name">The Whispering Woods</span>
+                        <span class="location-name">Shadowpine Grove</span>
+                        <span class="location-name">Verdant Canopy</span>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-icon">
+                        <i class="fas fa-fort-awesome"></i>
+                    </div>
+                    <h3>Cities & Settlements</h3>
+                    <div class="location-examples">
+                        <span class="location-name">Stonehaven</span>
+                        <span class="location-name">Rivertown</span>
+                        <span class="location-name">Highgate</span>
+                        <span class="location-name">Port Azure</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Inspiration -->
+        <section class="culture-section">
+            <h2 class="section-title">
+                <i class="fas fa-globe-americas"></i>
+                Cultural Inspiration for Place Names
+            </h2>
+            
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-helmet-battle"></i>
+                    </div>
+                    <h3>Norse Inspired</h3>
+                    <p>Strong, rugged names with harsh consonants and mythological references.</p>
+                    <div class="culture-examples">
+                        <span class="location-name">Fjordheim</span>
+                        <span class="location-name">Valhalla's Gate</span>
+                        <span class="location-name">Ragnar's Rest</span>
+                    </div>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>Celtic Inspired</h3>
+                    <p>Flowing, melodic names with nature themes and soft consonants.</p>
+                    <div class="culture-examples">
+                        <span class="location-name">Avalon</span>
+                        <span class="location-name">Tir Na Nog</span>
+                        <span class="location-name">Caer Sidi</span>
+                    </div>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-gopuram"></i>
+                    </div>
+                    <h3>Eastern Inspired</h3>
+                    <p>Elegant, poetic names with spiritual and natural elements.</p>
+                    <div class="culture-examples">
+                        <span class="location-name">Jade Palace</span>
+                        <span class="location-name">Dragon's Breath Temple</span>
+                        <span class="location-name">Silk Road Oasis</span>
+                    </div>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h3>Mediterranean Inspired</h3>
+                    <p>Classical names with historical weight and warm climate imagery.</p>
+                    <div class="culture-examples">
+                        <span class="location-name">Marble Coast</span>
+                        <span class="location-name">Oracle's Peak</span>
+                        <span class="location-name">Golden Harbor</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- World Building Tips -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                World Building & Naming Tips
+            </h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3><i class="fas fa-language"></i> Establish Naming Conventions</h3>
+                    <p>Create consistent patterns for different cultures or regions in your world.</p>
+                    <p>Mountain dwellers might use hard consonants, while coastal people use softer, flowing sounds.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-history"></i> Consider Historical Context</h3>
+                    <p>Think about the history of your locations and how that might influence their names.</p>
+                    <p>Places might be named after founders, historical events, or geographical features.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-map-signs"></i> Use Descriptive Elements</h3>
+                    <p>Incorporate geographical features, colors, or notable characteristics into place names.</p>
+                    <p>Examples: "Crimson Peaks," "Whispering Woods," "Stonebridge."</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-people-arrows"></i> Reflect Cultural Identity</h3>
+                    <p>Different cultures in your world should have distinct naming styles.</p>
+                    <p>This adds depth and makes your world feel more authentic and diverse.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-book"></i> Research Real Languages</h3>
+                    <p>Draw inspiration from real-world languages and their naming conventions.</p>
+                    <p>Old English, Latin, Norse, and Celtic languages provide excellent foundations.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3><i class="fas fa-theater-masks"></i> Match Tone & Genre</h3>
+                    <p>Ensure your place names fit the overall tone of your story or game.</p>
+                    <p>Dark fantasy might use ominous names, while high fantasy uses more epic, majestic names.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Naming Conventions -->
+        <!-- <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-pen-fancy"></i>
+                Common Naming Conventions
+            </h2>
+            
+            <div class="conventions-section">
+                <h3><i class="fas fa-list-ol"></i> Effective Naming Patterns</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Geographical Features:</strong> Combine descriptors with landforms (e.g., "Shadowfen," "Sunstone Ridge")
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Founder Names:</strong> Name places after important figures (e.g., "Arthur's Rest," "Elowen's Grove")
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Historical Events:</strong> Reference significant past events (e.g., "Dragonfall Valley," "Siege Point")
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Mythological References:</strong> Draw from your world's myths (e.g., "Titan's Step," "Godsfist Peak")
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Resource-Based:</strong> Name after local resources (e.g., "Ironhold," "Goldwater")
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <strong>Combination Names:</strong> Merge words to create new terms (e.g., "Rivendell," "Stormwind")
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+    </div>
+
+    <footer class="container">
+        <p>GlanceName &copy; 2025 - Creative Place Names and World-Building Resources</p>
+    </footer>
+
+    <script>
+        // Copy functionality for place names
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add event listeners to all copy buttons
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const placeName = this.getAttribute('data-name');
+                    
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(placeName).then(() => {
+                        // Show feedback
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        this.style.background = 'var(--secondary)';
+                        this.style.borderColor = 'var(--secondary)';
+                        this.style.color = 'white';
+                        
+                        // Reset after 2 seconds
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                            this.style.background = 'transparent';
+                            this.style.borderColor = 'var(--primary)';
+                            this.style.color = 'var(--primary)';
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                });
+            });
+
+            // Add hover effects to category cards
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'var(--shadow)';
+                });
+            });
+
+            // Add animation to section titles on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all section titles and cards
+            const animatedElements = document.querySelectorAll('.section-title, .category-card, .tip-card, .location-card, .culture-card');
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.5s ease';
+                observer.observe(element);
+            });
+
+            // Add subtle animation to place name items
+            const placeNameItems = document.querySelectorAll('.place-name-item');
+            placeNameItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.05}s`;
+            });
+        });
+    </script>
+</body>
+</html>
