@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact GlanceName - Get in touch with our naming experts for questions about brand naming strategies and resources.">
+    <meta name="keywords" content="contact GlanceName, naming experts, brand naming help, naming strategies contact">
+    <meta name="author" content="GlanceName">
+    <title>Contact Us - GlanceName</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 36px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: var(--radius);
+            transition: all 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            margin-bottom: 40px;
+        }
+
+        .contact-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-header {
+            margin-bottom: 40px;
+        }
+
+        .contact-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .contact-subtitle {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .contact-method {
+            padding: 30px;
+            background: var(--light);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-method h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .contact-method h3 i {
+            font-size: 24px;
+        }
+
+        .email-address {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 15px 0;
+            padding: 15px;
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 2px solid var(--primary);
+        }
+
+        .contact-method p {
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        .help-topics {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .help-topics h4 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .help-topics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .help-topics li {
+            padding: 5px 0;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .help-topics li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .note-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .note-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 25px;
+            }
+            
+            .contact-title {
+                font-size: 26px;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .email-address {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-signature"></i>
+                <span>GlanceName</span>
+            </div>
+            <p class="tagline">Expert naming strategies for businesses, brands, and creative projects</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <!-- <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/fashion-names">Fashion Brands</a></li>
+                <li><a href="/band-name">Band Names</a></li>
+                <li><a href="/tech-names">Tech Companies</a></li>
+                <li><a href="/book-title">Book Titles</a></li>
+                <li><a href="/studio-names">Creative Studios</a></li>
+                <li><a href="/domain-name">Domain Names</a></li>
+                <li><a href="/academic-names">Academic Names</a></li>
+                <li><a href="/eco-names">Eco-Friendly Brands</a></li>
+                <li><a href="/royal-names">Royal Names</a></li>
+                <li><a href="/contact" style="background: var(--primary); color: var(--white);">Contact</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h1 class="contact-title">Contact GlanceName</h1>
+                    <p class="contact-subtitle">Get in touch with our naming experts. We're here to help with your naming journey!</p>
+                </div>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h3><i class="fas fa-envelope"></i> Email Support</h3>
+                        <div class="email-address">glancename@gmail.com</div>
+                        <p>We respond to all emails within 24 hours</p>
+                        <p>Typically much faster for simple questions</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3><i class="fas fa-question-circle"></i> How We Can Help</h3>
+                        <div class="help-topics">
+                            <h4>We can assist with:</h4>
+                            <ul>
+                                <li>Questions about our naming guides</li>
+                                <li>Naming strategy advice</li>
+                                <li>Website feedback and suggestions</li>
+                                <li>Partnership inquiries</li>
+                                <li>New category suggestions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <h4><i class="fas fa-exclamation-circle"></i> Important Note</h4>
+                    <p>While we don't offer custom naming services, we're happy to answer questions about our guides and help you with naming strategies. Our resources are designed to empower you to create the perfect names for your projects!</p>
+                </div>
+
+                <div class="contact-method">
+                    <h3><i class="fas fa-clock"></i> Response Time</h3>
+                    <p><strong>Within 24 hours</strong></p>
+                    <p>We're committed to responding to all inquiries promptly</p>
+                    <p>Weekend responses may take slightly longer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>GlanceName &copy; 2025 - Professional naming strategies and tools</p>
+            <!-- <div class="footer-links">
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+                <a href="/contact">Contact</a>
+            </div> -->
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Highlight current page in navigation
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (currentPath === linkPath) {
+                    link.style.background = 'var(--primary)';
+                    link.style.color = 'var(--white)';
+                }
+            });
+            
+            // Clean URLs - remove .html from internal links
+            const links = document.querySelectorAll('a[href$=".html"]');
+            links.forEach(link => {
+                const cleanUrl = link.getAttribute('href').replace('.html', '');
+                link.setAttribute('href', cleanUrl);
+            });
+        });
+    </script>
+</body>
+</html>
