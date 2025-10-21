@@ -3,3 +3,11 @@
   "cleanUrls": true
 }
 
+{
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap-fixed.xml"
+    }
+  ]
+}
