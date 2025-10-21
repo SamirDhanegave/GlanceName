@@ -2,10 +2,3 @@
 <test>Hello World</test>
 
 {
-  "routes": [
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap-fixed.xml"
-    }
-  ]
-}
